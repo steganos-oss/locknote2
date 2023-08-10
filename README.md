@@ -10,9 +10,9 @@ the art encryption and password derivation technology.
 LockNote 2.0 saves your encrypted notes within itself - the program is the document. No installation and no
 data folder is required.
 
-Official page - https://www.steganos.com/locknote
-Source code - https://github.com/steganos-oss/locknote2
-Official binary executable - https://go.steganos.com/productpage_locknote2_download_en
+- Official page - https://www.steganos.com/locknote
+- Source code - https://github.com/steganos-oss/locknote2
+- Official binary executable - https://go.steganos.com/productpage_locknote2_download_en
 
 
 Build Notes
