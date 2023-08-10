@@ -1,0 +1,3050 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+//#pragma code_page(0)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_INFO                BITMAP                  "res\\info.bmp"
+
+IDB_INFO96              BITMAP                  "res\\info96.bmp"
+
+IDB_INFO120             BITMAP                  "res\\info120.bmp"
+
+IDB_INFO144             BITMAP                  "res\\info144.bmp"
+
+IDB_INFO168             BITMAP                  "res\\info168.bmp"
+
+IDB_INFO192             BITMAP                  "res\\info192.bmp"
+
+IDB_INFO216             BITMAP                  "res\\info216.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\locknote2.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FINDNEXT,       VIRTKEY, NOINVERT
+    //VK_F8,          ID_CHANGE_LANGUAGE,      VIRTKEY, NOINVERT
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Abbrechen",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Über Steganos LockNote 2..."
+FONT 8, "Segoe UI", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,192,235,65,14
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,20,14,300,160
+    PUSHBUTTON      "Website &besuchen...",IDC_VISIT_WEBSITE,7,235,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "Speichern &unter...",         57604
+        MENUITEM SEPARATOR
+        MENUITEM "&Passwort ändern...",        ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Beenden",                     ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Rückgängig\tStrg+Z",       ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tStrg+X",       ID_EDIT_CUT
+        MENUITEM "&Kopieren\tStrg+C",           ID_EDIT_COPY
+        MENUITEM "&Einfügen\tStrg+V",          ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "S&uchen...\tStrg+F",          ID_EDIT_FIND
+        MENUITEM "&Weitersuchen\tF3",           ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Alles &markieren\tStrg+A",    ID_EDIT_SELECT_ALL
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        POPUP "&Schriftart"
+        BEGIN
+            MENUITEM "Arial",                       ID_FONT_ARIAL
+            MENUITEM "Cascadia Code",               ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas",                    ID_FONT_CONSOLAS
+            MENUITEM "Courier New",                 ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console",              ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma",                      ID_FONT_TAHOMA
+            MENUITEM "Verdana",                     ID_FONT_VERDANA
+        END
+        POPUP "Schrift&größe"
+        BEGIN
+            MENUITEM "9",                           ID_VIEW_FONTSIZE_9
+            MENUITEM "10",                          ID_VIEW_FONTSIZE_10
+            MENUITEM "12",                          ID_VIEW_FONTSIZE_12
+            MENUITEM "14",                          ID_VIEW_FONTSIZE_14
+        END
+#pragma code_page(65001)
+        POPUP "Sprache"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+#pragma code_page(1252)
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "Über Steganos &LockNote",    ID_APP_ABOUT
+    END
+    MENUITEM SEPARATOR
+    POPUP "Steganos"
+    BEGIN
+        MENUITEM "Passwort-Manager",            ID_STEGANOS_PASSWORD_MANAGER
+        MENUITEM "Daten-Safe",                        ID_STEGANOS_SAFE
+        MENUITEM "Privacy Suite",               ID_STEGANOS_PRIVACYSUITE
+        MENUITEM "VPN Online Shield",           ID_STEGANOS_ONLINESHIELD
+        MENUITEM SEPARATOR
+        MENUITEM "Sonderangebot LockNote-Nutzer",            ID_STEGANOS_LATESTOFFERS
+        MENUITEM SEPARATOR
+        MENUITEM "Auf LockNote Updates prüfen", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "Sie haben ein ungültiges Passwort eingegeben."
+    IDS_PASSWORD_CHANGED    "Das neue Passwort wird verwendet, wenn Sie das Dokument schließen."
+    IDS_SAVE_CHANGES        "Möchten Sie Ihre Änderungen speichern?"
+    IDS_CANT_CONVERT        "Die Datei '%s' kann nicht konvertiert werden und wird übersprungen.\n\nEs können nur Dateien mit der Endung .txt konvertiert werden."
+    IDS_ASK_CONVERT_FILES   "Sie haben eine oder mehrere Dateien auf das Textfeld gezogen.\n\nMöchten Sie diese Dateien jetzt konvertieren?"
+    IDS_TEXT_IS_ENCRYPTED   "Das Dokument enthält keinen Text und wird nicht verschlüsselt gespeichert."
+    IDS_WELCOME             "\r\nWillkommen zu Steganos LockNote 2.\r\n\r\nGeben Sie einen Text ein und schließen Sie Steganos LockNote 2, sobald Sie fertig sind. Was Sie geschrieben haben, wird mit einem Passwort, das Sie wählen, verschlüsselt.\r\n\r\nSie können auch Text-Dokumente auf Steganos LockNote 2 ziehen, um sie ebenfalls in verschlüsselte selbstöffnende Dokumente zu verwandeln.\r\n\r\nSie können diesen Text entfernen, um mit einem leeren Dokument zu beginnen. Durch Leeren des Textfelds kann auch das Passwort zurückgesetzt werden.\r\n\r\nMehr Tipps und Tricks gibt es auf der Steganos LockNote 2 Website:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Passwort:"
+    IDS_PASSWORD_REPEAT     "Passwort-Wiederholung:"
+    IDS_CANCEL              "&Abbrechen"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® ist ein eingetragenes Warenzeichen in der Europäischen Union, den Vereinigten Staaten von Amerika, der Schweiz und anderen Ländern.\r\n\r\nDieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\r\n\r\nDie Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\r\n\r\nSie sollten ein Exemplar der GNU General Public License zusammen mit diesem Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA."
+    IDS_ABOUT_TITLE         "Über Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "Website &besuchen..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Bitte geben Sie das Passwort ein, das zum Öffnen des Dokuments benötigt wird."
+    IDS_ENTER_NEW_PASSWORD  "Bitte wählen Sie ein neues sicheres Passwort aus, mit dem das Dokument verschlüsselt werden soll."
+    IDS_PASSWORD_MISMATCH   "Die von Ihnen angegebenen Passwörter stimmen nicht überein."
+    IDS_PASSWORD_EMPTY      "Die Passwort-Felder sind leer. Bitte geben Sie ein Passwort an, das mindestens ein Zeichen lang ist."
+    IDS_CONVERT_DONE        "%i Datei(en) wurden konvertiert. Sie finden die verschlüsselten Dokumente im selben Ordner, wo sich die Originaldateien befinden."
+    IDS_FIND_NOT_FOUND      "'%s' wurde nicht gefunden."
+    IDS_STATUSBAR_STATS     " %d Zeilen, %d Buchstaben. Zeile %d, Spalte %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Programm-Informationen, Versionsnummer und Copyright anzeigen\nÜber"
+    ID_APP_EXIT             "Beendet die Anwendung und speichert das veränderte Dokument\nBeenden"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "&Datei"
+    IDS_MENUITEM_SAVEAS     "Speichern &unter..."
+    IDS_CHANGE_PASSWORD     "&Password ändern..."
+    IDS_MENUITEM_QUIT       "Beenden"
+    IDS_MENU_EDIT           "&Bearbeiten"
+    IDS_MENUITEM_UNDO       "&Rückgängig\tStrg+Z"
+    IDS_MENUITEM_CUT        "&Ausschneiden\tStrg+X"
+    IDS_MENUITEM_COPY       "&Kopieren\tStrg+C"
+    IDS_MENUITEM_PASTE      "&Einfügen\tStrg+V"
+    IDS_MENUITEM_FIND       "S&uchen...\tStrg+F"
+    IDS_MENUITEM_FINDNEXT   "&Weitersuchen\tF3"
+    IDS_MENUITEM_SELECT_ALL "Alles &markieren\tStrg+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "&Ansicht"
+    IDS_MENU_FONT           "&Schriftart"
+    IDS_MENU_FONT_SIZE      "Schrift&größe"
+    IDS_MENU_LANGUAGE       "Sprache"
+    IDS_MENU_HELP           "&Hilfe"
+    IDS_MENUITEM_SPM        "Passwort-Manager"
+    IDS_MENUITEM_SAFE       "Daten-Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Sonderangebot LockNote-Nutzer"
+    IDS_MENUITEM_CHECKUPDATE "Auf LockNote Updates prüfen"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Kopiert die Auswahl und fügt sie in die Zwischenablage ein\nKopieren"
+    ID_EDIT_CUT             "Entfernt die Auswahl und fügt sie in die Zwischenablage ein\nAusschneiden"
+    ID_EDIT_FIND            "Nach einem angegebenen Text suchen\nSuchen"
+    ID_EDIT_PASTE           "Text aus der Zwischenablage einfügen\nEinfügen"
+    ID_EDIT_SELECT_ALL      "Gesamtes Dokument auswählen\nAuswählen"
+    ID_EDIT_UNDO            "Letzte Aktion rückgängig machen\nZurücksetzen"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Wählt den gesamten Text Aus\nAlles auswählen"
+    ID_VIEW_FONTSIZE        "Schriftgröße ändern"
+END
+#pragma code_page(1252)
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,192,235,65,14
+    CONTROL         IDB_INFO120,IDC_STATIC,"Static",SS_BITMAP,20,14,188,100
+    PUSHBUTTON      "&Visit Website...",IDC_VISIT_WEBSITE,7,235,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,145,250,83,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+        HORZGUIDE, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Save &As...",                 57604
+        MENUITEM SEPARATOR
+        MENUITEM "Change Password...",          ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Font"
+        BEGIN
+            MENUITEM "Arial",                       ID_FONT_ARIAL
+            MENUITEM "Cascadia Code",               ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas",                    ID_FONT_CONSOLAS
+            MENUITEM "Courier New",                 ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console",              ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma",                      ID_FONT_TAHOMA
+            MENUITEM "Verdana",                     ID_FONT_VERDANA
+        END
+        POPUP "Font &size"
+        BEGIN
+            MENUITEM "9",                           ID_VIEW_FONTSIZE_9
+            MENUITEM "10",                          ID_VIEW_FONTSIZE_10
+            MENUITEM "12",                          ID_VIEW_FONTSIZE_12
+            MENUITEM "14",                          ID_VIEW_FONTSIZE_14
+        END
+#pragma code_page(65001)
+        POPUP "Language"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+#pragma code_page(1252)
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Steganos LockNote 2",  ID_APP_ABOUT
+    END
+    MENUITEM SEPARATOR
+    POPUP "Steganos"
+    BEGIN
+        MENUITEM "Password Manager",            ID_STEGANOS_PASSWORD_MANAGER
+        MENUITEM "Data Safe",                        ID_STEGANOS_SAFE
+        MENUITEM "Privacy Suite",               ID_STEGANOS_PRIVACYSUITE
+        MENUITEM "VPN Online Shield",           ID_STEGANOS_ONLINESHIELD
+        MENUITEM SEPARATOR
+        MENUITEM "Special offer for LockNote users",               ID_STEGANOS_LATESTOFFERS
+        MENUITEM SEPARATOR
+        MENUITEM "Check for LockNote Updates",  ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "Steganos Software GmbH"
+            VALUE "FileDescription", "Steganos LockNote 2"
+            VALUE "FileVersion", "2, 0, 0, 0"
+            VALUE "InternalName", "LockNote 2"
+            VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+            VALUE "OriginalFilename", "locknote2.exe"
+            VALUE "ProductName", "Steganos LockNote 2"
+            VALUE "ProductVersion", "2, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "You supplied an invalid password."
+    IDS_PASSWORD_CHANGED    "The new password will be applied when you close the document."
+    IDS_SAVE_CHANGES        "Do you want to save your changes?"
+    IDS_CANT_CONVERT        "The file '%s' can not be converted and will be skipped.\n\nOnly files with the extension .txt can be converted."
+    IDS_ASK_CONVERT_FILES   "You dropped one or several files onto this document.\n\nDo you want to convert these files?"
+    IDS_TEXT_IS_ENCRYPTED   "There is no text in the exported document.\nThe document will not be encrypted."
+    IDS_WELCOME             "\r\nWelcome to Steganos LockNote 2.\r\n\r\nType some text and close Steganos LockNote 2 when you are done. What you typed will be encrypted using a password, which you supply.\r\n\r\nYou can also drop text documents on Steganos LockNote 2 to turn them into encrypted self-opening documents as well.\r\n\r\nYou can start over by removing all text. You can also clear the text field to reset the password.\r\n\r\nGet more tips and tricks from the Steganos LockNote 2 website:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Password:"
+    IDS_PASSWORD_REPEAT     "Repeat Password:"
+    IDS_CANCEL              "&Cancel"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "&Visit website..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Please enter the password required to open this document."
+    IDS_ENTER_NEW_PASSWORD  "Please choose a new secure password to encrypt this document."
+    IDS_PASSWORD_MISMATCH   "The passwords which you have entered do not match."
+    IDS_PASSWORD_EMPTY      "The password fields are empty. Please enter a password with a length of at least one character."
+    IDS_CONVERT_DONE        "%i file(s) have been converted. You find the encrypted documents where the original files are residing."
+    IDS_FIND_NOT_FOUND      "'%s' could not be found."
+    IDS_STATUSBAR_STATS     " %d lines, %d characters. Line %d, column %d."
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "&File"
+    IDS_MENUITEM_SAVEAS     "Save &As..."
+    IDS_CHANGE_PASSWORD     "Change password..."
+    IDS_MENUITEM_QUIT       "E&xit"
+    IDS_MENU_EDIT           "&Edit"
+    IDS_MENUITEM_UNDO       "&Undo\tCtrl+Z"
+    IDS_MENUITEM_CUT        "Cu&t\tCtrl+X"
+    IDS_MENUITEM_COPY       "&Copy\tCtrl+C"
+    IDS_MENUITEM_PASTE      "&Paste\tCtrl+V"
+    IDS_MENUITEM_FIND       "&Find...\tCtrl+F"
+    IDS_MENUITEM_FINDNEXT   "Find &Next\tF3"
+    IDS_MENUITEM_SELECT_ALL "Select &All\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "&View"
+    IDS_MENU_FONT           "F&ont"
+    IDS_MENU_FONT_SIZE      "Font &size"
+    IDS_MENU_LANGUAGE       "Language"
+    IDS_MENU_HELP           "&Help"
+    IDS_MENUITEM_SPM        "Password Manager"
+    IDS_MENUITEM_SAFE       "Data Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Special offer for LockNote users"
+    IDS_MENUITEM_CHECKUPDATE "Check for LockNote Updates"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Select all text\nSelect All"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Annuler",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "A propos de Steganos LockNote 2..."
+FONT 8, "Segoe UI", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,192,235,65,14
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,20,14,300,160
+    PUSHBUTTON      "&Visiter le site Internet...",IDC_VISIT_WEBSITE,7,235,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "Enregistrer &sous...",        57604
+        MENUITEM SEPARATOR
+        MENUITEM "Changer le mot de passe...",  ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_APP_EXIT
+    END
+    POPUP "&Edition"
+    BEGIN
+        MENUITEM "&Annuler\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Couper\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "Co&pier\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "C&oller\tCtrl+V",             ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Rec&hercher...\tCtrl+F",      ID_EDIT_FIND
+        MENUITEM "Rechercher le sui&vant\tF3",  ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Sélectionner &tout\tCtrl+A", ID_EDIT_SELECT_ALL
+    END
+    POPUP "Aff&ichage"
+    BEGIN
+        POPUP "&Police"
+        BEGIN
+            MENUITEM "Arial",                       ID_FONT_ARIAL
+            MENUITEM "Cascadia Code",               ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas",                    ID_FONT_CONSOLAS
+            MENUITEM "Courier New",                 ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console",              ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma",                      ID_FONT_TAHOMA
+            MENUITEM "Verdana",                     ID_FONT_VERDANA
+        END
+        POPUP "&Taille de police"
+        BEGIN
+            MENUITEM "9",                           ID_VIEW_FONTSIZE_9
+            MENUITEM "10",                          ID_VIEW_FONTSIZE_10
+            MENUITEM "12",                          ID_VIEW_FONTSIZE_12
+            MENUITEM "14",                          ID_VIEW_FONTSIZE_14
+        END
+#pragma code_page(65001)
+        POPUP "Langue"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+#pragma code_page(1252)
+    END
+    POPUP "&Aide"
+    BEGIN
+        MENUITEM "&A propos de Steganos LockNote 2", ID_APP_ABOUT
+    END
+        MENUITEM SEPARATOR
+        POPUP "Steganos"
+        BEGIN
+        MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+        MENUITEM "Data Safe", ID_STEGANOS_SAFE
+        MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+        MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+        MENUITEM SEPARATOR
+        MENUITEM "Offre spéciale aux utilisateurs de LockNote", ID_STEGANOS_LATESTOFFERS
+        MENUITEM SEPARATOR
+        MENUITEM "Rechercher les mises à jour", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+        END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "Vous avez fourni un mot de passe invalide."
+    IDS_PASSWORD_CHANGED    "Le nouveau mot de passe sera appliqué quand vous fermerez le document."
+    IDS_SAVE_CHANGES        "Voulez-vous sauvegarder vos modifications?"
+    IDS_CANT_CONVERT        "Le fichier '%s' ne peut être converti et sera ignoré.\n\nSeuls les fichiers avec l'extension .txt peuvent être convertis."
+    IDS_ASK_CONVERT_FILES   "Vous avez glissé un ou plusieurs fichiers sur ce document.\n\nSouhaitez-vous convertir ces fichiers ?"
+    IDS_TEXT_IS_ENCRYPTED   "Il n'y a pas de texte dans le document exporté.\nLe document ne sera pas encrypté."
+    IDS_WELCOME             "\r\nBienvenue dans Steganos LockNote 2.\r\n\r\nTapez ici un peu de texte et fermez Steganos LockNote 2 quand vous avez terminé. Ce que vous avez tapé sera encrypté à l'aide d'un mot de passe, que vous fournirez.\r\n\r\nVous pouvez aussi glisser des documents sur la fenêtre de Steganos LockNote 2 pour les convertir en documents encryptés s'ouvrant par eux-mêmes.\r\n\r\nVous pouvez commencer en remplaçant ce texte. Vous pouvez également effacer la zone de texte pour ré-initialiser le mot de passe.\r\n\r\nObtenez d'autres trucs et astuces depuis le site Internet de Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Mot de passe :"
+    IDS_PASSWORD_REPEAT     "Répétez le mot de passe :"
+    IDS_CANCEL              "&Annuler"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® est une marque déposée dans l'Union Européenne, les Etats-Unis d'Amérique, la Suisse et autres pays.\r\n\r\nCe programme est un logiciel libre; vous pouvez le re-distribuer et/ou le modifier selon les termes de la 'General Public License' de GNU publiée par la 'Free Software Foundation'; version 2 de la licence, ou (à votre convenance) toute autre version ultérieure.\r\n\r\nCe programme est distribué avec l'espoir qu'il vous sera utile, mais SANS AUCUNE GARANTIE; également sans même la garantie implicite d'être COMMERCIALISABLE ou de correspondre à un USAGE SPECIFIQUE. Voyez la 'General Public License' de GNU pour plus de détails.\r\n\r\nVous devriez avoir reçu une copie de la 'General Public License' de GNU fournie avec ce programme; dans le cas contraire, vous pouvez écrire à : Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_ABOUT_TITLE         "Sur Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "&Visiter le site Internet..."
+    IDS_CHANGE_PASSWORD     "Changer le mot de passe..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Veuillez taper le mot de passe requis pour ouvrir ce document."
+    IDS_ENTER_NEW_PASSWORD  "Veuillez choisir un nouveau mot de passe sûr pour encrypter ce document."
+    IDS_PASSWORD_MISMATCH   "Les mots de passe que vous avez tapés ne correspondent pas."
+    IDS_PASSWORD_EMPTY      "Les zones de mot de passe sont vides. Veuillez taper un mot de passe d'une longueur d'au moins un caractère."
+    IDS_CONVERT_DONE        "%i fichier(s) converti(s). Vous trouverez les documents encryptés là où les fichiers d'origine sont situés."
+    IDS_FIND_NOT_FOUND      "'%s' introuvable."
+    IDS_STATUSBAR_STATS     " %d lignes, %d caractères. Ligne %d, colonne %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Affiche les informations sur le programme, le numéro de version et le copyright\nA propos"
+    ID_APP_EXIT             "Quitte l'application, demande de sauvegarder les documents\nQuitter"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "&Fichier"
+    IDS_MENUITEM_SAVEAS     "Enregistrer &sous..."
+    IDS_MENUITEM_QUIT       "&Quitter"
+    IDS_MENU_EDIT           "&Edition"
+    IDS_MENUITEM_UNDO       "&Annuler\tCtrl+Z"
+    IDS_MENUITEM_CUT        "&Couper\tCtrl+X"
+    IDS_MENUITEM_COPY       "Co&pier\tCtrl+C"
+    IDS_MENUITEM_PASTE      "C&oller\tCtrl+V"
+    IDS_MENUITEM_FIND       "Rec&hercher...\tCtrl+F"
+    IDS_MENUITEM_FINDNEXT   "Rechercher le sui&vant\tF3"
+    IDS_MENUITEM_SELECT_ALL "Sélectionner &tout\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "Aff&ichage"
+    IDS_MENU_FONT           "&Police"
+    IDS_MENU_FONT_SIZE      "&Taille de police"
+    IDS_MENU_LANGUAGE       "Langue"
+    IDS_MENU_HELP           "&Aide"
+    IDS_MENUITEM_SPM        "Password Manager"
+    IDS_MENUITEM_SAFE       "Data Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Offre spéciale aux utilisateurs de LockNote"
+    IDS_MENUITEM_CHECKUPDATE "Rechercher les mises à jour"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copie la sélection et la place dans le presse-papier\nCopier"
+    ID_EDIT_CUT             "Coupe la sélection et la place dans le presse-papier\nCouper"
+    ID_EDIT_FIND            "Recherche le texte spécifié\nRechercher"
+    ID_EDIT_PASTE           "Insère le contenu du presse-papier\nColler"
+    ID_EDIT_SELECT_ALL      "Sélectionne tout le document\nSélectionner tout"
+    ID_EDIT_UNDO            "Annule la dernière action\nAnnuler"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Sélectionner tout le texte\nSélectionner tout"
+END
+#pragma code_page(1252)
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialoog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,120,102,50,14
+    PUSHBUTTON      "&Annuleren",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Over Steganos Locknote 2..."
+FONT 8, "Segoe UI", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,192,235,65,14
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,20,14,300,160
+    PUSHBUTTON      "&Bezoek Website...",IDC_VISIT_WEBSITE,7,235,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Bestand"
+    BEGIN
+        MENUITEM "Opslaan &als...",             57604
+        MENUITEM SEPARATOR
+        MENUITEM "Wachtwoord veranderen...",    ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Af&sluiten",                  ID_APP_EXIT
+    END
+    POPUP "Be&werken"
+    BEGIN
+        MENUITEM "&Ongedaan maken\tCtrl+Z",     ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Knip&pen\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "&Kopiëren\tCtrl+C",          ID_EDIT_COPY
+        MENUITEM "&Plakken\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoeken...\tCtrl+F",          ID_EDIT_FIND
+        MENUITEM "Volgende &Zoeken\tF3",        ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Selecteer &Alles\tCtrl+A",    ID_EDIT_SELECT_ALL
+    END
+    POPUP "B&ekijken"
+    BEGIN
+        POPUP "&Letter"
+        BEGIN
+            MENUITEM "Arial",                       ID_FONT_ARIAL
+            MENUITEM "Cascadia Code",               ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas",                    ID_FONT_CONSOLAS
+            MENUITEM "Courier New",                 ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console",              ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma",                      ID_FONT_TAHOMA
+            MENUITEM "Verdana",                     ID_FONT_VERDANA
+        END
+        POPUP "&Lettergrootte"
+        BEGIN
+            MENUITEM "9",                           ID_VIEW_FONTSIZE_9
+            MENUITEM "10",                          ID_VIEW_FONTSIZE_10
+            MENUITEM "12",                          ID_VIEW_FONTSIZE_12
+            MENUITEM "14",                          ID_VIEW_FONTSIZE_14
+        END
+#pragma code_page(65001)
+        POPUP "Taal"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+#pragma code_page(1252)
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Over Steganos Locknote 2",   ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "U heeft een verkeerd wachtwoord ingevoerd."
+    IDS_PASSWORD_CHANGED    "Het nieuwe wachtwoord zal in gebruik genomen worden zodra het document herstart is."
+    IDS_SAVE_CHANGES        "Wilt u de wijzigingen opslaan?"
+    IDS_CANT_CONVERT        "Het bestand '%s' kan niet geconverteerd worden en zal worden overgeslagen.\n\nAlleen bestanden met de extensie .txt kunnen worden geconverteerd."
+    IDS_ASK_CONVERT_FILES   "U heeft verschillende bestanden toegevoegd.\n\nWilt u deze bestanden converteren?"
+    IDS_TEXT_IS_ENCRYPTED   "Er is geen tekst in het bestand.\nHet document zal niet worden versleuteld."
+    IDS_WELCOME             "\r\nWelkom bij Steganos LockNote 2.\r\n\r\nVoer tekst in en sluit LockNote wanneer u klaar bent. Wat u typt zal worden versleuteld met een wachtwoord, wat u zelf bepaalt.\r\n\r\nU kunt ook tekstbestanden invoeren in LockNote om ze te veranderen in versleutelde zelf-openende documenten.\r\n\r\nU kunt nu beginnen door alle tekst hier te verwijderen. U kunt ook alle tekst verwijderen om het wachtwoord te resetten.\r\n\r\nMeer tips op de officiële website:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Wachtwoord:"
+    IDS_PASSWORD_REPEAT     "Herhaal wachtwoord:"
+    IDS_CANCEL              "&Annuleren"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® is een geregistreerd merk in de Europese Unie, de Verenigde Staten van Amerika, Zwitserland en andere landen.\r\n\r\nDit programma is gratis software; u kunt het opnieuw uitgeven en/of het programma aanpassen onder de termen van de GNU General Public License gepubliceerd onder de Free Software Foundation; onder de tweede versie, of (uw keuze) latere versies.\r\n\r\nDit programma is uitgegeven in de hoop dat het handig zal zijn, maar ZONDER ENIGE GARANTIE; zonder zelfs de inbegrepen garantie van MERCHANTABILITY of GESCHIKTHEID VOOR PARTICULIER GEBRUIK. Zie de GNU General Public License voor meer details.\r\n\r\nU zou een kopie van de GNU General Public License moeten hebben gekregen met dit programma; zo niet, schijf naar de Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_ABOUT_TITLE         "Over Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "&Bezoek Website..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Voer het wachtwoord in voor dit document."
+    IDS_ENTER_NEW_PASSWORD  "Voer een nieuw wachtwoord in om dit document te versleutelen."
+    IDS_PASSWORD_MISMATCH   "U heeft een incorrect wachtwoord ingevoerd."
+    IDS_PASSWORD_EMPTY      "De wachtwoord velden zijn leeg. Voer een wachtwoord in met op zijn minst één letter of cijfer."
+    IDS_CONVERT_DONE        "%i bestand(en) zijn geconverteerd. De versleutelde bestanden vindt u op de plaats waar ook de orginele bestanden staan."
+    IDS_FIND_NOT_FOUND      "'%s' kon niet worden gevonden."
+    IDS_STATUSBAR_STATS     " %d lijnen, %d tekens. Lijn %d, kolom %d."
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Toont programma informatie, versie nummer en copyright\nAbout"
+    ID_APP_EXIT             "Sluit programma; vraagt of u wijzigingen wilt opslaan\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "&Bestand"
+    IDS_MENUITEM_SAVEAS     "Opslaan &als..."
+    IDS_CHANGE_PASSWORD     "Wachtwoord veranderen..."
+    IDS_MENUITEM_QUIT       "Af&sluiten"
+    IDS_MENU_EDIT           "Be&werken"
+    IDS_MENUITEM_UNDO       "&Ongedaan maken\tCtrl+Z"
+    IDS_MENUITEM_CUT        "Knip&pen\tCtrl+X"
+    IDS_MENUITEM_COPY       "&Kopiëren\tCtrl+C"
+    IDS_MENUITEM_PASTE      "&Plakken\tCtrl+V"
+    IDS_MENUITEM_FIND       "&Zoeken...\tCtrl+F"
+    IDS_MENUITEM_FINDNEXT   "Volgende &Zoeken\tF3"
+    IDS_MENUITEM_SELECT_ALL "Selecteer &Alles\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "B&ekijken"
+    IDS_MENU_FONT           "&Letter"
+    IDS_MENU_FONT_SIZE      "&Lettergrootte"
+    IDS_MENU_LANGUAGE       "Taal"
+    IDS_MENU_HELP           "&Help"
+    IDS_MENUITEM_SPM        "Password Manager"
+    IDS_MENUITEM_SAFE       "Data Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Speciaal aanbod voor LockNote gebruikers"
+    IDS_MENUITEM_CHECKUPDATE "Controleren op updates"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Kopieer de selectie naar Windows Clipboard\nCopy"
+    ID_EDIT_CUT             "Knip de selectie naar Windows Clipboard\nCut"
+    ID_EDIT_FIND            "Zoek naar bepaalde tekst\nFind"
+    ID_EDIT_PASTE           "Voer Windows Clipboard inhoud in\nPaste"
+    ID_EDIT_SELECT_ALL      "Selecteer het gehele document\nSelect All"
+    ID_EDIT_UNDO            "Maak laatste actie ongedaan\nUndo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Selecteer alle tekst\nSelect all"
+END
+
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Spain, International Sort) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Diálogo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1,108,48,109,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,108,72,109,15,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Aceptar",IDOK,120,102,50,14
+    PUSHBUTTON      "&Cancelar",IDCANCEL,180,102,50,14
+    LTEXT           "Static",IDC_INFOTEXT,18,18,198,20
+    LTEXT           "Static",IDC_STATIC_PASSWORD1,18,50,84,8,0,WS_EX_RIGHT
+    LTEXT           "Static",IDC_STATIC_PASSWORD2,18,74,84,8,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,8,7,222,90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de Steganos LockNote 2..."
+FONT 8, "Segoe UI", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Aceptar",IDOK,192,235,58,14
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP,20,14,300,160
+    PUSHBUTTON      "&Visite el sitio Web...",IDC_VISIT_WEBSITE,7,235,91,14
+    EDITTEXT        IDC_COPYRIGHT,7,193,251,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 96
+        HORZGUIDE, 257
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Archivo"
+    BEGIN
+        MENUITEM "Guardar &como...",            57604
+        MENUITEM SEPARATOR
+        MENUITEM "Cambiar contraseña...",      ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "&Salir",                      ID_APP_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "&Deshacer\tCtrl+Z",           ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cor&tar\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "&Copiar\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "&Pegar\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Buscar...\tCtrl+F",          ID_EDIT_FIND
+        MENUITEM "Buscar &siguiente\tF3",       ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Seleccionar &todo\tCtrl+A",   ID_EDIT_SELECT_ALL
+    END
+    POPUP "&Ver"
+    BEGIN
+        POPUP "&Fuente"
+        BEGIN
+            MENUITEM "Arial",                       ID_FONT_ARIAL
+            MENUITEM "Cascadia Code",               ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas",                    ID_FONT_CONSOLAS
+            MENUITEM "Courier New",                 ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console",              ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma",                      ID_FONT_TAHOMA
+            MENUITEM "Verdana",                     ID_FONT_VERDANA
+        END
+        POPUP "&Tamaño de fuente"
+        BEGIN
+            MENUITEM "9",                           ID_VIEW_FONTSIZE_9
+            MENUITEM "10",                          ID_VIEW_FONTSIZE_10
+            MENUITEM "12",                          ID_VIEW_FONTSIZE_12
+            MENUITEM "14",                          ID_VIEW_FONTSIZE_14
+        END
+#pragma code_page(65001)
+        POPUP "Idioma"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+#pragma code_page(1252)
+    END
+    POPUP "Ay&uda"
+    BEGIN
+        MENUITEM "&Acerca de Steganos LockNote 2", ID_APP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "La contraseña no es válida."
+    IDS_PASSWORD_CHANGED    "Se aplicará la contraseña nueva cuando cierre el documento."
+    IDS_SAVE_CHANGES        "¿Desea guardar los cambios?"
+    IDS_CANT_CONVERT        "El archivo '%s' no se puede convertir y se omitirá.\n\nSolamente se pueden convertir los archivos con la extensión .txt."
+    IDS_ASK_CONVERT_FILES   "Ha colocado uno o más archivos en este documento.\n\n¿Desea convertir estos archivos?"
+    IDS_TEXT_IS_ENCRYPTED   "El documento exportado no contiene texto.\nEl documento no se codificará."
+    IDS_WELCOME             "\r\nBienvenido a Steganos LockNote 2.\r\n\r\nEscriba el texto y cierre Steganos LockNote 2 al finalizar. Lo que escriba se codificará con la contraseña que usted proporcione.\r\n\r\nTambién puede colocar documentos de texto en Steganos LockNote 2 para convertirlos en documentos codificados que se abren automáticamente.\r\n\r\nPara empezar de nuevo, borre todo el texto. También puede borrar el campo de texto para restablecer la contraseña.\r\n\r\nObtenga más sugerencias en el sitio Web de Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Contraseña:"
+    IDS_PASSWORD_REPEAT     "Repita la contraseña:"
+    IDS_CANCEL              "&Cancelar"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® es una marca comercial registrada en la Unión Europea, en los Estados Unidos de América, en Suiza y en otros países.\r\n\r\nEste programa es un software gratuito; usted puede redistribuirlo y modificarlo bajo los términos de la Licencia Pública General GNU publicada por Free Software Foundation; ya sea la versión 2 de la licencia o cualquier versión posterior (a su discreción).\r\n\r\nEste programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; no incluye ni siguiera la garantía implícita de COMERCIABILIDAD o ADECUACIÓN PARA UN FIN PARTICULAR. Consulte la Licencia Pública General GNU para obtener más detalles.\r\n\r\nDebería haber recibido una copia de la Licencia Pública General GNU junto con este programa; si no la recibió, escriba a Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_ABOUT_TITLE         "Sobre Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "&Visite el sitio Web..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Escriba la contraseña requerida para abrir este documento."
+    IDS_ENTER_NEW_PASSWORD  "Elija una nueva contraseña segura para codificar este documento."
+    IDS_PASSWORD_MISMATCH   "Las contraseñas escritas no coinciden."
+    IDS_PASSWORD_EMPTY      "Los campos de contraseña están vacíos. Escriba una contraseña con una longitud de al menos un carácter."
+    IDS_CONVERT_DONE        "Se ha(n) convertido %i archivo(s). Los documentos codificados se encuentran donde residen los archivos originales."
+    IDS_FIND_NOT_FOUND      "'%s' no pudo ser encontrado."
+    IDS_STATUSBAR_STATS     " %d líneas, %d caracteres. Línea %d, columna %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Información, número de versión y copyright del programa\nAcerca de"
+    ID_APP_EXIT             "Sale de la aplicación; indica que se guarden los documentos\nSalir"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "&Archivo"
+    IDS_MENUITEM_SAVEAS     "Guardar &como..."
+    IDS_CHANGE_PASSWORD     "Cambiar contraseña..."
+    IDS_MENUITEM_QUIT       "&Salir"
+    IDS_MENU_EDIT           "&Editar"
+    IDS_MENUITEM_UNDO       "&Deshacer\tCtrl+Z"
+    IDS_MENUITEM_CUT        "Cu&t\tCtrl+X"
+    IDS_MENUITEM_COPY       "&Copiar\tCtrl+C"
+    IDS_MENUITEM_PASTE      "&Pegar\tCtrl+V"
+    IDS_MENUITEM_FIND       "&Buscar...\tCtrl+F"
+    IDS_MENUITEM_FINDNEXT   "Buscar &siguiente\tF3"
+    IDS_MENUITEM_SELECT_ALL "Seleccionar &todo\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "&Ver"
+    IDS_MENU_FONT           "&Fuente"
+    IDS_MENU_FONT_SIZE      "&Tamaño de fuente"
+    IDS_MENU_LANGUAGE       "Idioma"
+    IDS_MENU_HELP           "Ay&uda"
+    IDS_MENUITEM_SPM        "Password Manager"
+    IDS_MENUITEM_SAFE       "Data Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Oferta especial para usuarios de LockNote"
+    IDS_MENUITEM_CHECKUPDATE "Buscar actualizaciones"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copia la selección y la coloca en el Portapapeles\nCopiar"
+    ID_EDIT_CUT             "Corta la selección y la coloca en el Portapapeles\nCortar"
+    ID_EDIT_FIND            "Busca el texto especificado\nBuscar"
+    ID_EDIT_PASTE           "Inserta el contenido del Portapapeles\nPegar"
+    ID_EDIT_SELECT_ALL      "Selecciona el documento completo\nSeleccionar todo"
+    ID_EDIT_UNDO            "Deshace la última acción\nDeshacer"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Selecciona todo el texto\nSeleccionar todo"
+END
+#pragma code_page(1252)
+
+#endif    // Spanish (Spain, International Sort) resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+LANGUAGE LANG_ITALIAN, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+EDITTEXT        IDC_PASSWORD1, 108, 48, 109, 14, ES_PASSWORD | ES_AUTOHSCROLL
+EDITTEXT        IDC_PASSWORD2, 108, 72, 109, 15, ES_PASSWORD | ES_AUTOHSCROLL
+DEFPUSHBUTTON   "&OK", IDOK, 120, 102, 50, 14
+PUSHBUTTON      "&Annulla", IDCANCEL, 180, 102, 50, 14
+LTEXT           "Static", IDC_INFOTEXT, 18, 18, 198, 20
+LTEXT           "Static", IDC_STATIC_PASSWORD1, 18, 50, 84, 8, 0, WS_EX_RIGHT
+LTEXT           "Static", IDC_STATIC_PASSWORD2, 18, 74, 84, 8, 0, WS_EX_RIGHT
+GROUPBOX        "", IDC_STATIC, 8, 7, 222, 90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+DEFPUSHBUTTON   "&OK", IDOK, 192, 235, 65, 14
+CONTROL         IDB_INFO120, IDC_STATIC, "Static", SS_BITMAP, 20, 14, 188, 100
+PUSHBUTTON      "Visita il sito web...", IDC_VISIT_WEBSITE, 7, 235, 91, 14
+EDITTEXT        IDC_COPYRIGHT, 7, 145, 250, 83, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+IDD_PASSWORD, DIALOG
+BEGIN
+LEFTMARGIN, 7
+RIGHTMARGIN, 230
+TOPMARGIN, 7
+BOTTOMMARGIN, 116
+END
+
+IDD_ABOUTBOX, DIALOG
+BEGIN
+LEFTMARGIN, 7
+VERTGUIDE, 258
+TOPMARGIN, 7
+BOTTOMMARGIN, 249
+HORZGUIDE, 96
+END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+POPUP "File"
+BEGIN
+MENUITEM "Salva con nome...", 57604
+MENUITEM SEPARATOR
+MENUITEM "Cambia password...", ID_FILE_CHANGEPASSWORD
+MENUITEM SEPARATOR
+MENUITEM "Uscita", ID_APP_EXIT
+END
+POPUP "Modifica"
+BEGIN
+MENUITEM "Annullamento\tCtrl+Z", ID_EDIT_UNDO
+MENUITEM SEPARATOR
+MENUITEM "Tagliare\tCtrl+X", ID_EDIT_CUT
+MENUITEM "Copia\tCtrl+C", ID_EDIT_COPY
+MENUITEM "Incolla\tCtrl+V", ID_EDIT_PASTE
+MENUITEM SEPARATOR
+MENUITEM "Trova...\tCtrl+F", ID_EDIT_FIND
+MENUITEM "Trova il prossimo\tF3", ID_EDIT_FINDNEXT
+MENUITEM SEPARATOR
+MENUITEM "Seleziona tutti\tCtrl+A", ID_EDIT_SELECT_ALL
+END
+POPUP "Vista"
+BEGIN
+POPUP "Carattere"
+BEGIN
+MENUITEM "Arial", ID_FONT_ARIAL
+MENUITEM "Cascadia Code", ID_FONT_CASCADIA_CODE
+MENUITEM "Consolas", ID_FONT_CONSOLAS
+MENUITEM "Courier New", ID_FONT_COURIER_NEW
+MENUITEM "Lucida Console", ID_FONT_LUCIDA_CONSOLE
+MENUITEM "Tahoma", ID_FONT_TAHOMA
+MENUITEM "Verdana", ID_FONT_VERDANA
+END
+POPUP "Dimensione del carattere"
+BEGIN
+MENUITEM "9", ID_VIEW_FONTSIZE_9
+MENUITEM "10", ID_VIEW_FONTSIZE_10
+MENUITEM "12", ID_VIEW_FONTSIZE_12
+MENUITEM "14", ID_VIEW_FONTSIZE_14
+END
+#pragma code_page(65001)
+    POPUP "Lingua"
+    BEGIN
+        MENUITEM "English", LANG_ENGLISH
+        MENUITEM "Deutsch", LANG_GERMAN
+        MENUITEM "Français", LANG_FRENCH
+        MENUITEM "Español", LANG_SPANISH
+        MENUITEM "Italiano", LANG_ITALIAN
+        MENUITEM "Português", LANG_PORTUGUESE
+        MENUITEM "Nederlands", LANG_DUTCH
+        MENUITEM "Svenska", LANG_SWEDISH
+        MENUITEM "Polski", LANG_POLISH
+        MENUITEM "Русский", LANG_RUSSIAN
+    END
+#pragma code_page(1252)
+END
+POPUP "Aiuto"
+BEGIN
+MENUITEM "&About Steganos LockNote 2", ID_APP_ABOUT
+END
+MENUITEM SEPARATOR
+POPUP "Steganos"
+BEGIN
+MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+MENUITEM "Data Safe", ID_STEGANOS_SAFE
+MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+MENUITEM SEPARATOR
+MENUITEM "Offerta speciale per gli utenti di LockNote", ID_STEGANOS_LATESTOFFERS
+MENUITEM SEPARATOR
+MENUITEM "Verifica degli aggiornamenti di LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#include ""atlres.h""\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 0, 0
+PRODUCTVERSION 2, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "000004b0"
+BEGIN
+VALUE "CompanyName", "Steganos Software GmbH"
+VALUE "FileDescription", "Steganos LockNote 2"
+VALUE "FileVersion", "2, 0, 0, 0"
+VALUE "InternalName", "LockNote 2"
+VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+VALUE "OriginalFilename", "locknote2.exe"
+VALUE "ProductName", "Steganos LockNote 2"
+VALUE "ProductVersion", "2, 0, 0, 0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0, 1200
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Steganos LockNote 2"
+    IDS_INVALID_PASSWORD    "È stata fornita una password non valida."
+    IDS_PASSWORD_CHANGED    "La nuova password verrà applicata alla chiusura del documento."
+    IDS_SAVE_CHANGES        "Volete salvare le modifiche?"
+    IDS_CANT_CONVERT        "Il file '%s' non può essere convertito e verrà saltato.\n\nSolo i file con estensione .txt possono essere convertiti."
+    IDS_ASK_CONVERT_FILES   "Sono stati inseriti uno o più file in questo documento.\n\nDesiderate convertire questi file?"
+    IDS_TEXT_IS_ENCRYPTED   "Non c'è testo nel documento esportato. \nIl documento non viene crittografato."
+    IDS_WELCOME             "\r\nBenvenuti a Steganos LockNote 2.\r\n\r\nDigitate del testo e chiudete Steganos LockNote 2 quando avete finito. Il testo digitato verrà crittografato utilizzando una password fornita dall'utente.\r\n\r\nPotete anche rilasciare documenti di testo su Steganos LockNote 2 per trasformarli in documenti crittografati ad apertura automatica.\r\n\r\nPotete ricominciare rimuovendo tutto il testo. È anche possibile cancellare il campo di testo per reimpostare la password.\r\n\r\nPer ulteriori suggerimenti e trucchi consultare il sito web di Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+    IDS_PASSWORD            "Password:"
+    IDS_PASSWORD_REPEAT     "Ripetere la password:"
+    IDS_CANCEL              "&Annulla"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+    IDS_VISIT_WEBSITE       "&Visita il sito web..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ENTER_PASSWORD      "Inserire la password necessaria per aprire questo documento."
+    IDS_ENTER_NEW_PASSWORD  "Scegliere una nuova password sicura per criptare questo documento."
+    IDS_PASSWORD_MISMATCH   "Le password inserite non corrispondono."
+    IDS_PASSWORD_EMPTY      "I campi della password sono vuoti. Inserire una password di almeno un carattere."
+    IDS_CONVERT_DONE        "I file %i sono stati convertiti. I documenti criptati si trovano nel luogo in cui risiedono i file originali."
+    IDS_FIND_NOT_FOUND      "'%s' non è stato trovato."
+    IDS_STATUSBAR_STATS     " %d righe, %d caratteri. Riga %d, colonna %d."
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Visualizza le informazioni sul programma, il numero di versione e il copyright\nCirca"
+    ID_APP_EXIT             "Esce dall'applicazione; chiede di salvare i documenti.\nUscita"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_FILE           "File"
+    IDS_MENUITEM_SAVEAS     "Salva con nome...."
+    IDS_CHANGE_PASSWORD     "Cambiare la password..."
+    IDS_MENUITEM_QUIT       "Uscita"
+    IDS_MENU_EDIT           "Modifica"
+    IDS_MENUITEM_UNDO       "Annula\tCtrl+Z"
+    IDS_MENUITEM_CUT        "Taglia\tCtrl+X"
+    IDS_MENUITEM_COPY       "Copia\tCtrl+C"
+    IDS_MENUITEM_PASTE      "Incolla\tCtrl+V"
+    IDS_MENUITEM_FIND       "Trova...\tCtrl+F"
+    IDS_MENUITEM_FINDNEXT   "Trova il prossimo\tF3"
+    IDS_MENUITEM_SELECT_ALL "Seleziona tutti\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_VIEW           "Vista"
+    IDS_MENU_FONT           "Carattere"
+    IDS_MENU_FONT_SIZE      "Dimensione del carattere"
+    IDS_MENU_LANGUAGE       "Lingua"
+    IDS_MENU_HELP           "Aiuto"
+    IDS_MENUITEM_SPM        "Password Manager"
+    IDS_MENUITEM_SAFE       "Data Safe"
+    IDS_MENUITEM_SSS        "Privacy Suite"
+    IDS_MENUITEM_SOS        "VPN Online Shield"
+    IDS_MENUITEM_LATEST     "Offerta speciale per gli utenti di LockNote"
+    IDS_MENUITEM_CHECKUPDATE "Verifica degli aggiornamenti di LockNote"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copiare la selezione e metterla negli appunti\nCopia"
+    ID_EDIT_CUT             "Tagliare la selezione e metterla negli appunti\nTaglia"
+    ID_EDIT_FIND            "Trova il testo specificato\nTrova"
+    ID_EDIT_PASTE           "Inserire il contenuto degli appunti\nIncolla"
+    ID_EDIT_SELECT_ALL      "Selezionare l'intero documento\nSeleziona tutti"
+    ID_EDIT_UNDO            "Annullare l'ultima azione\nAnulla"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTALL       "Selezionare l'intero documento\nSeleziona tutti"
+END
+
+#endif    // Italian resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+EDITTEXT        IDC_PASSWORD1, 108, 48, 109, 14, ES_PASSWORD | ES_AUTOHSCROLL
+EDITTEXT        IDC_PASSWORD2, 108, 72, 109, 15, ES_PASSWORD | ES_AUTOHSCROLL
+DEFPUSHBUTTON   "&OK", IDOK, 120, 102, 50, 14
+PUSHBUTTON      "&Cancelar", IDCANCEL, 180, 102, 50, 14
+LTEXT           "Static", IDC_INFOTEXT, 18, 18, 198, 20
+LTEXT           "Static", IDC_STATIC_PASSWORD1, 18, 50, 84, 8, 0, WS_EX_RIGHT
+LTEXT           "Static", IDC_STATIC_PASSWORD2, 18, 74, 84, 8, 0, WS_EX_RIGHT
+GROUPBOX        "", IDC_STATIC, 8, 7, 222, 90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+DEFPUSHBUTTON   "&OK", IDOK, 192, 235, 65, 14
+CONTROL         IDB_INFO120, IDC_STATIC, "Static", SS_BITMAP, 20, 14, 188, 100
+PUSHBUTTON      "Visitar o sítio Web...", IDC_VISIT_WEBSITE, 7, 235, 91, 14
+EDITTEXT        IDC_COPYRIGHT, 7, 145, 250, 83, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+IDD_PASSWORD, DIALOG
+BEGIN
+LEFTMARGIN, 7
+RIGHTMARGIN, 230
+TOPMARGIN, 7
+BOTTOMMARGIN, 116
+END
+
+IDD_ABOUTBOX, DIALOG
+BEGIN
+LEFTMARGIN, 7
+VERTGUIDE, 258
+TOPMARGIN, 7
+BOTTOMMARGIN, 249
+HORZGUIDE, 96
+END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+POPUP "Ficheiro"
+BEGIN
+MENUITEM "Guardar como...", 57604
+MENUITEM SEPARATOR
+MENUITEM "Alterar a palavra-passe...", ID_FILE_CHANGEPASSWORD
+MENUITEM SEPARATOR
+MENUITEM "Sair", ID_APP_EXIT
+END
+POPUP "Editar"
+BEGIN
+MENUITEM "Anular\tCtrl+Z", ID_EDIT_UNDO
+MENUITEM SEPARATOR
+MENUITEM "Cortar\tCtrl+X", ID_EDIT_CUT
+MENUITEM "Cópia\tCtrl+C", ID_EDIT_COPY
+MENUITEM "Colar\tCtrl+V", ID_EDIT_PASTE
+MENUITEM SEPARATOR
+MENUITEM "Encontrar...\tCtrl+F", ID_EDIT_FIND
+MENUITEM "Encontrar o próximo\tF3", ID_EDIT_FINDNEXT
+MENUITEM SEPARATOR
+MENUITEM "Selecionar tudo\tCtrl+A", ID_EDIT_SELECT_ALL
+END
+POPUP "Ver"
+BEGIN
+POPUP "Tipo de letra"
+BEGIN
+MENUITEM "Arial", ID_FONT_ARIAL
+MENUITEM "Cascadia Code", ID_FONT_CASCADIA_CODE
+MENUITEM "Consolas", ID_FONT_CONSOLAS
+MENUITEM "Courier New", ID_FONT_COURIER_NEW
+MENUITEM "Lucida Console", ID_FONT_LUCIDA_CONSOLE
+MENUITEM "Tahoma", ID_FONT_TAHOMA
+MENUITEM "Verdana", ID_FONT_VERDANA
+END
+POPUP "Tamanho da letra"
+BEGIN
+MENUITEM "9", ID_VIEW_FONTSIZE_9
+MENUITEM "10", ID_VIEW_FONTSIZE_10
+MENUITEM "12", ID_VIEW_FONTSIZE_12
+MENUITEM "14", ID_VIEW_FONTSIZE_14
+END
+#pragma code_page(65001)
+POPUP "Idioma"
+BEGIN
+MENUITEM "English", LANG_ENGLISH
+MENUITEM "Deutsch", LANG_GERMAN
+MENUITEM "Français", LANG_FRENCH
+MENUITEM "Español", LANG_SPANISH
+MENUITEM "Italiano", LANG_ITALIAN
+MENUITEM "Português", LANG_PORTUGUESE
+MENUITEM "Nederlands", LANG_DUTCH
+MENUITEM "Svenska", LANG_SWEDISH
+MENUITEM "Polski", LANG_POLISH
+MENUITEM "Русский", LANG_RUSSIAN
+END
+#pragma code_page(1252)
+END
+POPUP "Help"
+BEGIN
+MENUITEM "&About Steganos LockNote 2", ID_APP_ABOUT
+END
+MENUITEM SEPARATOR
+POPUP "Steganos"
+BEGIN
+MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+MENUITEM "Data Safe", ID_STEGANOS_SAFE
+MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+MENUITEM SEPARATOR
+MENUITEM "Oferta especial para utilizadores do LockNote", ID_STEGANOS_LATESTOFFERS
+MENUITEM SEPARATOR
+MENUITEM "Verificar se há actualizações do LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#include ""atlres.h""\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 0, 0
+PRODUCTVERSION 2, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "000004b0"
+BEGIN
+VALUE "CompanyName", "Steganos Software GmbH"
+VALUE "FileDescription", "Steganos LockNote 2"
+VALUE "FileVersion", "2, 0, 0, 0"
+VALUE "InternalName", "LockNote 2"
+VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+VALUE "OriginalFilename", "locknote2.exe"
+VALUE "ProductName", "Steganos LockNote 2"
+VALUE "ProductVersion", "2, 0, 0, 0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0, 1200
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+IDR_MAINFRAME           "Steganos LockNote 2"
+IDS_INVALID_PASSWORD    "Forneceu uma palavra-passe inválida."
+IDS_PASSWORD_CHANGED    "A nova palavra-passe será aplicada quando fechar o documento."
+IDS_SAVE_CHANGES        "Pretende guardar as suas alterações?"
+IDS_CANT_CONVERT        "O ficheiro '%s' não pode ser convertido e será ignorado.\n\nApenas os ficheiros com a extensão .txt podem ser convertidos."
+IDS_ASK_CONVERT_FILES   "Colocou um ou vários ficheiros neste documento.\n\nDeseja converter estes ficheiros?"
+IDS_TEXT_IS_ENCRYPTED   "Não existe texto no documento exportado.\nO documento não será encriptado."
+IDS_WELCOME             "\r\nBem-vindo ao Steganos LockNote 2.\r\n\r\nDigite algum texto e feche o Steganos LockNote 2 quando terminar. O que escreveste será encriptado utilizando uma palavra-passe, fornecida por ti.\r\n\r\nTambém podes deixar cair documentos de texto no Steganos LockNote 2 para os transformares em documentos encriptados de abertura automática.\r\n\r\nPodes começar de novo removendo todo o texto. Também podes limpar o campo de texto para redefinir a palavra-passe.\r\n\r\nObtém mais dicas e truques no site do Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+IDS_PASSWORD            "Palavra-passe:"
+IDS_PASSWORD_REPEAT     "Repetir a palavra-passe:"
+IDS_CANCEL              "&Cancelar"
+END
+
+STRINGTABLE
+BEGIN
+IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+IDS_VISIT_WEBSITE       "&Visitar o sítio Web..."
+END
+
+STRINGTABLE
+BEGIN
+IDS_ENTER_PASSWORD      "Introduza a palavra-passe necessária para abrir este documento."
+IDS_ENTER_NEW_PASSWORD  "Escolha uma nova palavra-passe segura para encriptar este documento."
+IDS_PASSWORD_MISMATCH   "As palavras-passe que introduziu não correspondem."
+IDS_PASSWORD_EMPTY      "Os campos da palavra-passe estão vazios. Introduza uma palavra-passe com um comprimento de pelo menos um carácter."
+IDS_CONVERT_DONE        "%i ficheiro(s) foram convertidos. Encontra os documentos encriptados onde residem os ficheiros originais."
+IDS_FIND_NOT_FOUND      "Não foi possível encontrar '%s'."
+IDS_STATUSBAR_STATS     " %d linhas, %d caracteres. Linha %d, coluna %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_APP_ABOUT            "Apresentar informações sobre o programa, número da versão e direitos de autor\nSobre"
+ID_APP_EXIT             "Sair da aplicação; pede para guardar documentos\nSair"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+IDS_MENU_FILE           "Ficheiro"
+IDS_MENUITEM_SAVEAS     "Guardar como..."
+IDS_CHANGE_PASSWORD     "Alterar a palavra-passe..."
+IDS_MENUITEM_QUIT       "Sair"
+IDS_MENU_EDIT           "Editar"
+IDS_MENUITEM_UNDO       "Anular\tCtrl+Z"
+IDS_MENUITEM_CUT        "Cortar\tCtrl+X"
+IDS_MENUITEM_COPY       "Cópia\tCtrl+C"
+IDS_MENUITEM_PASTE      "Colar\tCtrl+V"
+IDS_MENUITEM_FIND       "Encontrar...\tCtrl+F"
+IDS_MENUITEM_FINDNEXT   "Encontrar o próximo\tF3"
+IDS_MENUITEM_SELECT_ALL "Selecionar tudo\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+IDS_MENU_VIEW           "Ver"
+IDS_MENU_FONT           "Tipo de letra"
+IDS_MENU_FONT_SIZE      "Tamanho da letra"
+IDS_MENU_LANGUAGE       "Idioma"
+IDS_MENU_HELP           "Ajuda"
+IDS_MENUITEM_SPM        "Password Manager"
+IDS_MENUITEM_SAFE       "Data Safe"
+IDS_MENUITEM_SSS        "Privacy Suite"
+IDS_MENUITEM_SOS        "VPN Online Shield"
+IDS_MENUITEM_LATEST     "Oferta especial para utilizadores do LockNote"
+IDS_MENUITEM_CHECKUPDATE "Verificar se há actualizações do LockNote"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_EDIT_COPY            "Copiar a seleção e colocá-la na Área de transferência\nCópia"
+ID_EDIT_CUT             "Cortar a seleção e colocá-la na área de transferência\nCortar"
+ID_EDIT_FIND            "Procurar o texto especificado\nEncontrar"
+ID_EDIT_PASTE           "Inserir conteúdo da área de transferência\nColar"
+ID_EDIT_SELECT_ALL      "Selecionar o documento inteiro\nSelecionar tudo"
+ID_EDIT_UNDO            "Anular a última ação\nAnular"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+ID_EDIT_SELECTALL        "Selecionar o documento inteiro\nSelecionar tudo"
+END
+
+#endif    // Portuguese resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+EDITTEXT        IDC_PASSWORD1, 108, 48, 109, 14, ES_PASSWORD | ES_AUTOHSCROLL
+EDITTEXT        IDC_PASSWORD2, 108, 72, 109, 15, ES_PASSWORD | ES_AUTOHSCROLL
+DEFPUSHBUTTON   "&OK", IDOK, 120, 102, 50, 14
+PUSHBUTTON      "&Anuluj", IDCANCEL, 180, 102, 50, 14
+LTEXT           "Static", IDC_INFOTEXT, 18, 18, 198, 20
+LTEXT           "Static", IDC_STATIC_PASSWORD1, 18, 50, 84, 8, 0, WS_EX_RIGHT
+LTEXT           "Static", IDC_STATIC_PASSWORD2, 18, 74, 84, 8, 0, WS_EX_RIGHT
+GROUPBOX        "", IDC_STATIC, 8, 7, 222, 90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+DEFPUSHBUTTON   "&OK", IDOK, 192, 235, 65, 14
+CONTROL         IDB_INFO120, IDC_STATIC, "Static", SS_BITMAP, 20, 14, 188, 100
+PUSHBUTTON      "Odwiedź stronę...", IDC_VISIT_WEBSITE, 7, 235, 91, 14
+EDITTEXT        IDC_COPYRIGHT, 7, 145, 250, 83, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+IDD_PASSWORD, DIALOG
+BEGIN
+LEFTMARGIN, 7
+RIGHTMARGIN, 230
+TOPMARGIN, 7
+BOTTOMMARGIN, 116
+END
+
+IDD_ABOUTBOX, DIALOG
+BEGIN
+LEFTMARGIN, 7
+VERTGUIDE, 258
+TOPMARGIN, 7
+BOTTOMMARGIN, 249
+HORZGUIDE, 96
+END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+POPUP "Plik"
+BEGIN
+MENUITEM "Zapisz jako...", 57604
+MENUITEM SEPARATOR
+MENUITEM "Zmień hasło...", ID_FILE_CHANGEPASSWORD
+MENUITEM SEPARATOR
+MENUITEM "Wyjście", ID_APP_EXIT
+END
+POPUP "Edytuj"
+BEGIN
+MENUITEM "Cofnij\tCtrl+Z", ID_EDIT_UNDO
+MENUITEM SEPARATOR
+MENUITEM "Cięcie\tCtrl+X", ID_EDIT_CUT
+MENUITEM "Kopia\tCtrl+C", ID_EDIT_COPY
+MENUITEM "Pasta\tCtrl+V", ID_EDIT_PASTE
+MENUITEM SEPARATOR
+MENUITEM "Znajdź...\tCtrl+F", ID_EDIT_FIND
+MENUITEM "Znajdź następny\tF3", ID_EDIT_FINDNEXT
+MENUITEM SEPARATOR
+MENUITEM "Wybierz wszystko\tCtrl+A", ID_EDIT_SELECT_ALL
+END
+POPUP "Widok"
+BEGIN
+POPUP "Czcionka"
+BEGIN
+MENUITEM "Arial", ID_FONT_ARIAL
+MENUITEM "Cascadia Code", ID_FONT_CASCADIA_CODE
+MENUITEM "Consolas", ID_FONT_CONSOLAS
+MENUITEM "Courier New", ID_FONT_COURIER_NEW
+MENUITEM "Lucida Console", ID_FONT_LUCIDA_CONSOLE
+MENUITEM "Tahoma", ID_FONT_TAHOMA
+MENUITEM "Verdana", ID_FONT_VERDANA
+END
+POPUP "Rozmiar czcionki"
+BEGIN
+MENUITEM "9", ID_VIEW_FONTSIZE_9
+MENUITEM "10", ID_VIEW_FONTSIZE_10
+MENUITEM "12", ID_VIEW_FONTSIZE_12
+MENUITEM "14", ID_VIEW_FONTSIZE_14
+END
+#pragma code_page(65001)
+POPUP "Język"
+BEGIN
+MENUITEM "English", LANG_ENGLISH
+MENUITEM "Deutsch", LANG_GERMAN
+MENUITEM "Français", LANG_FRENCH
+MENUITEM "Español", LANG_SPANISH
+MENUITEM "Italiano", LANG_ITALIAN
+MENUITEM "Português", LANG_PORTUGUESE
+MENUITEM "Nederlands", LANG_DUTCH
+MENUITEM "Svenska", LANG_SWEDISH
+MENUITEM "Polski", LANG_POLISH
+MENUITEM "Русский", LANG_RUSSIAN
+END
+#pragma code_page(1252)
+END
+POPUP "Pomoc"
+BEGIN
+MENUITEM "&About Steganos LockNote 2", ID_APP_ABOUT
+END
+MENUITEM SEPARATOR
+POPUP "Steganos"
+BEGIN
+MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+MENUITEM "Data Safe", ID_STEGANOS_SAFE
+MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+MENUITEM SEPARATOR
+MENUITEM "Specjalna oferta dla użytkowników LockNote", ID_STEGANOS_LATESTOFFERS
+MENUITEM SEPARATOR
+MENUITEM "Sprawdź aktualizacje LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#include ""atlres.h""\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 0, 0
+PRODUCTVERSION 2, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "000004b0"
+BEGIN
+VALUE "CompanyName", "Steganos Software GmbH"
+VALUE "FileDescription", "Steganos LockNote 2"
+VALUE "FileVersion", "2, 0, 0, 0"
+VALUE "InternalName", "LockNote 2"
+VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+VALUE "OriginalFilename", "locknote2.exe"
+VALUE "ProductName", "Steganos LockNote 2"
+VALUE "ProductVersion", "2, 0, 0, 0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0, 1200
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+IDR_MAINFRAME           "Steganos LockNote 2"
+IDS_INVALID_PASSWORD    "Podano nieprawidłowe hasło."
+IDS_PASSWORD_CHANGED    "Nowe hasło zostanie zastosowane po zamknięciu dokumentu."
+IDS_SAVE_CHANGES        "Czy chcesz zapisać wprowadzone zmiany?"
+IDS_CANT_CONVERT        "Plik '%s' nie może zostać przekonwertowany i zostanie pominięty.\n\nKonwertowane mogą być tylko pliki z rozszerzeniem .txt."
+IDS_ASK_CONVERT_FILES   "Umieściłeś jeden lub kilka plików w tym dokumencie. Czy chcesz przekonwertować te pliki?"
+IDS_TEXT_IS_ENCRYPTED   "W wyeksportowanym dokumencie nie ma tekstu. Dokument nie zostanie zaszyfrowany."
+IDS_WELCOME             "\r\nWitamy w Steganos LockNote 2.\r\n\r\nWpisz tekst i zamknij Steganos LockNote 2, gdy skończysz. To, co wpisałeś, zostanie zaszyfrowane przy użyciu hasła, które podasz.\r\n\r\nMożesz także upuścić dokumenty tekstowe na Steganos LockNote 2, aby przekształcić je w zaszyfrowane dokumenty samootwierające.\r\n\r\nMożesz także wyczyścić pole tekstowe, aby zresetować hasło.\r\n\r\nZnajdź więcej porad i wskazówek na stronie Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+IDS_PASSWORD            "Hasło:"
+IDS_PASSWORD_REPEAT     "Powtórz hasło:"
+IDS_CANCEL              "&Anuluj"
+END
+
+STRINGTABLE
+BEGIN
+IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+IDS_VISIT_WEBSITE       "Odwiedź stronę..."
+END
+
+STRINGTABLE
+BEGIN
+IDS_ENTER_PASSWORD      "Wprowadź hasło wymagane do otwarcia tego dokumentu."
+IDS_ENTER_NEW_PASSWORD  "Wybierz nowe bezpieczne hasło, aby zaszyfrować ten dokument."
+IDS_PASSWORD_MISMATCH   "Wprowadzone hasła nie są zgodne."
+IDS_PASSWORD_EMPTY      "Pola hasła są puste. Wprowadź hasło o długości co najmniej jednego znaku."
+IDS_CONVERT_DONE        "%i pliki zostały przekonwertowane. Zaszyfrowane dokumenty znajdują się tam, gdzie oryginalne pliki."
+IDS_FIND_NOT_FOUND      "Nie można znaleźć '%s'."
+IDS_STATUSBAR_STATS     " %d wierszy, %d znaków. Wiersz %d, kolumna %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_APP_ABOUT            "Wyświetlanie informacji o programie, numeru wersji i praw autorskich\nO"
+ID_APP_EXIT             "Zamknięcie aplikacji; monit o zapisanie dokumentów\nWyjście"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+IDS_MENU_FILE           "Plik"
+IDS_MENUITEM_SAVEAS     "Zapisz jako...."
+IDS_CHANGE_PASSWORD     "Zmień hasło..."
+IDS_MENUITEM_QUIT       "Wyjście"
+IDS_MENU_EDIT           "Edytuj"
+IDS_MENUITEM_UNDO       "Cofnij\tCtrl+Z"
+IDS_MENUITEM_CUT        "Cięcie\tCtrl+X"
+IDS_MENUITEM_COPY       "Kopia\tCtrl+C"
+IDS_MENUITEM_PASTE      "Pasta\tCtrl+V"
+IDS_MENUITEM_FIND       "Znajdź...\tCtrl+F"
+IDS_MENUITEM_FINDNEXT   "Znajdź następny\tF3"
+IDS_MENUITEM_SELECT_ALL "Wybierz wszystko\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+IDS_MENU_VIEW           "Widok"
+IDS_MENU_FONT           "Czcionka"
+IDS_MENU_FONT_SIZE      "Rozmiar czcionki"
+IDS_MENU_LANGUAGE       "Język"
+IDS_MENU_HELP           "Pomoc"
+IDS_MENUITEM_SPM        "Password Manager"
+IDS_MENUITEM_SAFE       "Data Safe"
+IDS_MENUITEM_SSS        "Privacy Suite"
+IDS_MENUITEM_SOS        "VPN Online Shield"
+IDS_MENUITEM_LATEST     "Specjalna oferta dla użytkowników LockNote"
+IDS_MENUITEM_CHECKUPDATE "Sprawdź aktualizacje LockNote"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_EDIT_COPY            "Skopiuj zaznaczenie i umieść je w schowku\nKopia"
+ID_EDIT_CUT             "Wytnij zaznaczenie i umieść je w schowku\nCięcie"
+ID_EDIT_FIND            "Znajdź określony tekst\nZnajdź"
+ID_EDIT_PASTE           "Wstawianie zawartości schowka\nPasta"
+ID_EDIT_SELECT_ALL      "Wybierz cały dokument\nWybierz wszystko"
+ID_EDIT_UNDO            "Cofnij ostatnią akcję\nCofnij"
+END
+
+STRINGTABLE
+BEGIN
+ID_EDIT_SELECTALL       "Wybierz cały dokument\nWybierz wszystko"
+END
+#pragma code_page(1252)
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+LANGUAGE LANG_SWEDISH, SUBLANG_SWEDISH
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_PASSWORD1, 108, 48, 109, 14, ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2, 108, 72, 109, 15, ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK", IDOK, 120, 102, 50, 14
+    PUSHBUTTON      "&Avbryt", IDCANCEL, 180, 102, 50, 14
+    LTEXT           "Static", IDC_INFOTEXT, 18, 18, 198, 20
+    LTEXT           "Static", IDC_STATIC_PASSWORD1, 18, 50, 84, 8, 0, WS_EX_RIGHT
+    LTEXT           "Static", IDC_STATIC_PASSWORD2, 18, 74, 84, 8, 0, WS_EX_RIGHT
+    GROUPBOX        "", IDC_STATIC, 8, 7, 222, 90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK", IDOK, 192, 235, 65, 14
+    CONTROL         IDB_INFO120, IDC_STATIC, "Static", SS_BITMAP, 20, 14, 188, 100
+    PUSHBUTTON      "Besök webbplatsen...", IDC_VISIT_WEBSITE, 7, 235, 91, 14
+    EDITTEXT        IDC_COPYRIGHT, 7, 145, 250, 83, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        VERTGUIDE, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+        HORZGUIDE, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "Fil"
+    BEGIN
+        MENUITEM "Spara som...", 57604
+        MENUITEM SEPARATOR
+        MENUITEM "Ändra lösenord...", ID_FILE_CHANGEPASSWORD
+        MENUITEM SEPARATOR
+        MENUITEM "Avsluta", ID_APP_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Ångra\tCtrl+Z", ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Klipp\tCtrl+X", ID_EDIT_CUT
+        MENUITEM "Kopia\tCtrl+C", ID_EDIT_COPY
+        MENUITEM "Klistra in\tCtrl+V", ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Hitta...\tCtrl+F", ID_EDIT_FIND
+        MENUITEM "Hitta nästa\tF3", ID_EDIT_FINDNEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Välj alla\tCtrl+A", ID_EDIT_SELECT_ALL
+    END
+    POPUP "Utsiktw"
+    BEGIN
+        POPUP "Font"
+        BEGIN
+            MENUITEM "Arial", ID_FONT_ARIAL
+            MENUITEM "Cascadia Code", ID_FONT_CASCADIA_CODE
+            MENUITEM "Consolas", ID_FONT_CONSOLAS
+            MENUITEM "Courier New", ID_FONT_COURIER_NEW
+            MENUITEM "Lucida Console", ID_FONT_LUCIDA_CONSOLE
+            MENUITEM "Tahoma", ID_FONT_TAHOMA
+            MENUITEM "Verdana", ID_FONT_VERDANA
+        END
+        POPUP "Fontstorlek"
+        BEGIN
+            MENUITEM "9", ID_VIEW_FONTSIZE_9
+            MENUITEM "10", ID_VIEW_FONTSIZE_10
+            MENUITEM "12", ID_VIEW_FONTSIZE_12
+            MENUITEM "14", ID_VIEW_FONTSIZE_14
+        END
+        #pragma code_page(65001)
+        POPUP "Språk"
+        BEGIN
+            MENUITEM "English", LANG_ENGLISH
+            MENUITEM "Deutsch", LANG_GERMAN
+            MENUITEM "Français", LANG_FRENCH
+            MENUITEM "Español", LANG_SPANISH
+            MENUITEM "Italiano", LANG_ITALIAN
+            MENUITEM "Português", LANG_PORTUGUESE
+            MENUITEM "Nederlands", LANG_DUTCH
+            MENUITEM "Svenska", LANG_SWEDISH
+            MENUITEM "Polski", LANG_POLISH
+            MENUITEM "Русский", LANG_RUSSIAN
+        END
+        #pragma code_page(1252)
+    END
+    POPUP "Hjälp"
+    BEGIN
+        MENUITEM "&About Steganos LockNote 2", ID_APP_ABOUT
+    END
+    MENUITEM SEPARATOR
+    POPUP "Steganos"
+    BEGIN
+        MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+        MENUITEM "Data Safe", ID_STEGANOS_SAFE
+        MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+        MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+        MENUITEM SEPARATOR
+        MENUITEM "Specialerbjudande för LockNote-användare", ID_STEGANOS_LATESTOFFERS
+        MENUITEM SEPARATOR
+        MENUITEM "Sök efter LockNote-uppdateringar", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 0, 0
+PRODUCTVERSION 2, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+    FILEFLAGS 0x1L
+#else
+    FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "Steganos Software GmbH"
+            VALUE "FileDescription", "Steganos LockNote 2"
+            VALUE "FileVersion", "2, 0, 0, 0"
+            VALUE "InternalName", "LockNote 2"
+            VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+            VALUE "OriginalFilename", "locknote2.exe"
+            VALUE "ProductName", "Steganos LockNote 2"
+            VALUE "ProductVersion", "2, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+IDR_MAINFRAME           "Steganos LockNote 2"
+IDS_INVALID_PASSWORD    "Du angav ett ogiltigt lösenord."
+IDS_PASSWORD_CHANGED    "Det nya lösenordet kommer att tillämpas när du stänger dokumentet."
+IDS_SAVE_CHANGES        "Vill du spara dina ändringar?"
+IDS_CANT_CONVERT        "Filen '%s' kan inte konverteras och kommer att hoppas över.\n\nEndast filer med tillägget .txt kan konverteras."
+IDS_ASK_CONVERT_FILES   "Du har tappat en eller flera filer på det här dokumentet.\n\nVill du konvertera dessa filer?"
+IDS_TEXT_IS_ENCRYPTED   "Det finns ingen text i det exporterade dokumentet.\nDokumentet kommer inte att krypteras."
+IDS_WELCOME             "\r\nVälkommen till Steganos LockNote 2.\r\n\r\nSkriv lite text och stäng Steganos LockNote 2 när du är klar. Det du skrev krypteras med ett lösenord som du anger.\r\n\r\nDu kan också släppa textdokument på Steganos LockNote 2 för att förvandla dem till krypterade självöppnande dokument.\r\n\r\nDu kan börja om från början genom att ta bort all text. Du kan också rensa textfältet för att återställa lösenordet.\r\n\r\nFå fler tips och tricks från Steganos LockNote 2's webbplats:\r\n\r\nhttps://steganos.com/locknote\r\n"
+IDS_PASSWORD            "Lösenord:"
+IDS_PASSWORD_REPEAT     "Upprepa lösenord:"
+IDS_CANCEL              "&Avbryt"
+END
+
+STRINGTABLE
+BEGIN
+IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+IDS_VISIT_WEBSITE       "Besök webbplatsen..."
+END
+
+STRINGTABLE
+BEGIN
+IDS_ENTER_PASSWORD      "Ange det lösenord som krävs för att öppna detta dokument."
+IDS_ENTER_NEW_PASSWORD  "Välj ett nytt säkert lösenord för att kryptera detta dokument."
+IDS_PASSWORD_MISMATCH   "De lösenord som du har angett stämmer inte överens."
+IDS_PASSWORD_EMPTY      "Lösenordsfälten är tomma. Ange ett lösenord med en längd på minst ett tecken."
+IDS_CONVERT_DONE        "%i fil(er) har konverterats. Du hittar de krypterade dokumenten där originalfilerna finns."
+IDS_FIND_NOT_FOUND      "'%s' kunde inte hittas."
+IDS_STATUSBAR_STATS     " %d rader, %d tecken. Rad %d, kolumn %d."
+END
+
+STRINGTABLE
+BEGIN
+ID_APP_ABOUT            "Visa programinformation, versionsnummer och copyright\nOm"
+ID_APP_EXIT             "Avsluta programmet; uppmanas att spara dokument\nAvsluta"
+END
+
+STRINGTABLE
+BEGIN
+IDS_MENU_FILE           "Fil"
+IDS_MENUITEM_SAVEAS     "Spara som..."
+IDS_CHANGE_PASSWORD     "Ändra lösenord..."
+IDS_MENUITEM_QUIT       "Avsluta"
+IDS_MENU_EDIT           "Edit"
+IDS_MENUITEM_UNDO       "Ångra\tCtrl+Z"
+IDS_MENUITEM_CUT        "Klipp\tCtrl+X"
+IDS_MENUITEM_COPY       "Kopia\tCtrl+C"
+IDS_MENUITEM_PASTE      "Klistra in\tCtrl+V"
+IDS_MENUITEM_FIND       "Hitta...\tCtrl+F"
+IDS_MENUITEM_FINDNEXT   "Hitta nästa\tF3"
+IDS_MENUITEM_SELECT_ALL "Välj alla\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+IDS_MENU_VIEW           "Utsikt"
+IDS_MENU_FONT           "Font"
+IDS_MENU_FONT_SIZE      "Fontstorlek"
+IDS_MENU_LANGUAGE       "Språk"
+IDS_MENU_HELP           "Hjälp"
+IDS_MENUITEM_SPM        "Password Manager"
+IDS_MENUITEM_SAFE       "Data Safe"
+IDS_MENUITEM_SSS        "Privacy Suite"
+IDS_MENUITEM_SOS        "VPN Online Shield"
+IDS_MENUITEM_LATEST     "Specialerbjudande för LockNote-användare"
+IDS_MENUITEM_CHECKUPDATE "Sök efter LockNote-uppdateringar"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_EDIT_COPY            "Kopiera urvalet och lägg det på Urklipp\nKopia"
+ID_EDIT_CUT             "Klipp ut urvalet och lägg det på Clipboard\nKlipp"
+ID_EDIT_FIND            "Hitta den angivna texten\nHitta"
+ID_EDIT_PASTE           "Infoga Urklippets innehåll\nKlistra in"
+ID_EDIT_SELECT_ALL      "Markera hela dokumentet\nVälj alla"
+ID_EDIT_UNDO            "Ångra den senaste åtgärden\nÅngra"
+END
+
+STRINGTABLE
+BEGIN
+ID_EDIT_SELECTALL       "Markera hela dokumentet\nVälj alla"
+END
+#pragma code_page(1252)
+
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 237, 123
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+EDITTEXT        IDC_PASSWORD1, 108, 48, 109, 14, ES_PASSWORD | ES_AUTOHSCROLL
+EDITTEXT        IDC_PASSWORD2, 108, 72, 109, 15, ES_PASSWORD | ES_AUTOHSCROLL
+DEFPUSHBUTTON   "&OK", IDOK, 120, 102, 50, 14
+PUSHBUTTON      "Отмена", IDCANCEL, 180, 102, 50, 14
+LTEXT           "Static", IDC_INFOTEXT, 18, 18, 198, 20
+LTEXT           "Static", IDC_STATIC_PASSWORD1, 18, 50, 84, 8, 0, WS_EX_RIGHT
+LTEXT           "Static", IDC_STATIC_PASSWORD2, 18, 74, 84, 8, 0, WS_EX_RIGHT
+GROUPBOX        "", IDC_STATIC, 8, 7, 222, 90
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 265, 256
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Steganos LockNote 2..."
+FONT 11, "Segoe UI", 400, 0, 0x0
+BEGIN
+DEFPUSHBUTTON   "&OK", IDOK, 192, 235, 65, 14
+CONTROL         IDB_INFO120, IDC_STATIC, "Static", SS_BITMAP, 20, 14, 188, 100
+PUSHBUTTON      "Посетите сайт...", IDC_VISIT_WEBSITE, 7, 235, 91, 14
+EDITTEXT        IDC_COPYRIGHT, 7, 145, 250, 83, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+IDD_PASSWORD, DIALOG
+BEGIN
+LEFTMARGIN, 7
+RIGHTMARGIN, 230
+TOPMARGIN, 7
+BOTTOMMARGIN, 116
+END
+
+IDD_ABOUTBOX, DIALOG
+BEGIN
+LEFTMARGIN, 7
+VERTGUIDE, 258
+TOPMARGIN, 7
+BOTTOMMARGIN, 249
+HORZGUIDE, 96
+END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+POPUP "Файл"
+BEGIN
+MENUITEM "Сохранить как...", 57604
+MENUITEM SEPARATOR
+MENUITEM "Изменить пароль...", ID_FILE_CHANGEPASSWORD
+MENUITEM SEPARATOR
+MENUITEM "Выход", ID_APP_EXIT
+END
+POPUP "едактировать"
+BEGIN
+MENUITEM "Отменить\tCtrl+Z", ID_EDIT_UNDO
+MENUITEM SEPARATOR
+MENUITEM "Вырезать\tCtrl+X", ID_EDIT_CUT
+MENUITEM "Копировать\tCtrl+C", ID_EDIT_COPY
+MENUITEM "Паста\tCtrl+V", ID_EDIT_PASTE
+MENUITEM SEPARATOR
+MENUITEM "Найти...\tCtrl+F", ID_EDIT_FIND
+MENUITEM "Найти следующий\tF3", ID_EDIT_FINDNEXT
+MENUITEM SEPARATOR
+MENUITEM "Выбрать все\tCtrl+A", ID_EDIT_SELECT_ALL
+END
+POPUP "Посмотреть"
+BEGIN
+POPUP "Шрифт"
+BEGIN
+MENUITEM "Arial", ID_FONT_ARIAL
+MENUITEM "Cascadia Code", ID_FONT_CASCADIA_CODE
+MENUITEM "Consolas", ID_FONT_CONSOLAS
+MENUITEM "Courier New", ID_FONT_COURIER_NEW
+MENUITEM "Lucida Console", ID_FONT_LUCIDA_CONSOLE
+MENUITEM "Tahoma", ID_FONT_TAHOMA
+MENUITEM "Verdana", ID_FONT_VERDANA
+END
+POPUP "Размер шрифта"
+BEGIN
+MENUITEM "9", ID_VIEW_FONTSIZE_9
+MENUITEM "10", ID_VIEW_FONTSIZE_10
+MENUITEM "12", ID_VIEW_FONTSIZE_12
+MENUITEM "14", ID_VIEW_FONTSIZE_14
+END
+#pragma code_page(65001)
+POPUP "Язык"
+BEGIN
+MENUITEM "English", LANG_ENGLISH
+MENUITEM "Deutsch", LANG_GERMAN
+MENUITEM "Français", LANG_FRENCH
+MENUITEM "Español", LANG_SPANISH
+MENUITEM "Italiano", LANG_ITALIAN
+MENUITEM "Português", LANG_PORTUGUESE
+MENUITEM "Nederlands", LANG_DUTCH
+MENUITEM "Svenska", LANG_SWEDISH
+MENUITEM "Polski", LANG_POLISH
+MENUITEM "Русский", LANG_RUSSIAN
+END
+#pragma code_page(1252)
+END
+POPUP "Справка"
+BEGIN
+MENUITEM "&About Steganos LockNote 2", ID_APP_ABOUT
+END
+MENUITEM SEPARATOR
+POPUP "Steganos"
+BEGIN
+MENUITEM "Password Manager", ID_STEGANOS_PASSWORD_MANAGER
+MENUITEM "Data Safe", ID_STEGANOS_SAFE
+MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
+MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
+MENUITEM SEPARATOR
+MENUITEM "Специальное предложение для пользователей LockNote", ID_STEGANOS_LATESTOFFERS
+MENUITEM SEPARATOR
+MENUITEM "Проверка обновлений LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
+END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#include ""atlres.h""\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\locknote.exe.manifest""\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 2, 0, 0, 0
+PRODUCTVERSION 2, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "000004b0"
+BEGIN
+VALUE "CompanyName", "Steganos Software GmbH"
+VALUE "FileDescription", "Steganos LockNote 2"
+VALUE "FileVersion", "2, 0, 0, 0"
+VALUE "InternalName", "LockNote 2"
+VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
+VALUE "OriginalFilename", "locknote2.exe"
+VALUE "ProductName", "Steganos LockNote 2"
+VALUE "ProductVersion", "2, 0, 0, 0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0, 1200
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+IDR_MAINFRAME           "Steganos LockNote 2"
+IDS_INVALID_PASSWORD    "Вы ввели неверный пароль."
+IDS_PASSWORD_CHANGED    "Новый пароль будет применен при закрытии документа."
+IDS_SAVE_CHANGES        "Хотите ли Вы сохранить изменения?"
+IDS_CANT_CONVERT        "Файл '%s' не может быть преобразован и будет пропущен.\n\nТолько файлы с расширением .txt могут быть преобразованы."
+IDS_ASK_CONVERT_FILES   "Вы поместили один или несколько файлов в этот документ.\n\nНе хотите ли вы преобразовать эти файлы?"
+IDS_TEXT_IS_ENCRYPTED   "В экспортируемом документе нет текста.\nДокумент не будет зашифрован."
+IDS_WELCOME             "\r\nДобро пожаловать в Steganos LockNote 2.\r\n\r\nНаберите текст и закройте Steganos LockNote 2, когда закончите. Набранный текст будет зашифрован с помощью пароля, который вы введете.\r\n\r\nВы также можете поместить текстовые документы в Steganos LockNote 2, чтобы превратить их в зашифрованные самооткрывающиеся документы.\r\n\r\nВы можете начать работу сначала, удалив весь текст. Вы также можете очистить текстовое поле, чтобы сбросить пароль.\r\n\r\nПолучите дополнительные советы и рекомендации на сайте Steganos LockNote 2:\r\n\r\nhttps://steganos.com/locknote\r\n"
+IDS_PASSWORD            "Пароль:"
+IDS_PASSWORD_REPEAT     "Повторить пароль:"
+IDS_CANCEL              "Отмена"
+END
+
+STRINGTABLE
+BEGIN
+IDS_COPYRIGHT           "Copyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_ABOUT_TITLE         "About Steganos LockNote 2"
+IDS_VISIT_WEBSITE       "Посетите сайт..."
+END
+
+STRINGTABLE
+BEGIN
+IDS_ENTER_PASSWORD      "Введите пароль, необходимый для открытия этого документа."
+IDS_ENTER_NEW_PASSWORD  "Пожалуйста, выберите новый надежный пароль для шифрования этого документа."
+IDS_PASSWORD_MISMATCH   "Введенные пароли не совпадают."
+IDS_PASSWORD_EMPTY      "Поля для ввода пароля пусты. Пожалуйста, введите пароль длиной не менее одного символа."
+IDS_CONVERT_DONE        "Преобразован %i файл(ов). Вы находите зашифрованные документы там, где находятся оригинальные файлы."
+IDS_FIND_NOT_FOUND      "'%s' не удалось найти."
+IDS_STATUSBAR_STATS     " %d строк, %d символов. Строка %d, столбец %d."
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_APP_ABOUT            "Отображение информации о программе, номера версии и авторских прав\nО сайте"
+ID_APP_EXIT             "Выход из приложения; запрос на сохранение документов\nВыход"
+END
+#pragma code_page(1252)
+
+STRINGTABLE
+BEGIN
+IDS_MENU_FILE           "Файл"
+IDS_MENUITEM_SAVEAS     "Сохранить как..."
+IDS_CHANGE_PASSWORD     "Изменить пароль..."
+IDS_MENUITEM_QUIT       "Выход"
+IDS_MENU_EDIT           "Редактировать"
+IDS_MENUITEM_UNDO       "Отменить\tCtrl+Z"
+IDS_MENUITEM_CUT        "Вырезать\tCtrl+X"
+IDS_MENUITEM_COPY       "Копировать\tCtrl+C"
+IDS_MENUITEM_PASTE      "Паста\tCtrl+V"
+IDS_MENUITEM_FIND       "Найти...\tCtrl+F"
+IDS_MENUITEM_FINDNEXT   "Найти следующий\tF3"
+IDS_MENUITEM_SELECT_ALL "Выбрать все\tCtrl+A"
+END
+
+STRINGTABLE
+BEGIN
+IDS_MENU_VIEW           "Посмотреть"
+IDS_MENU_FONT           "Шрифт"
+IDS_MENU_FONT_SIZE      "Размер шрифта"
+IDS_MENU_LANGUAGE       "Язык"
+IDS_MENU_HELP           "Справка"
+IDS_MENUITEM_SPM        "Password Manager"
+IDS_MENUITEM_SAFE       "Data Safe"
+IDS_MENUITEM_SSS        "Privacy Suite"
+IDS_MENUITEM_SOS        "VPN Online Shield"
+IDS_MENUITEM_LATEST     "Специальное предложение для пользователей LockNote"
+IDS_MENUITEM_CHECKUPDATE "Проверка обновлений LockNote"
+END
+
+#pragma code_page(65001)
+STRINGTABLE
+BEGIN
+ID_EDIT_COPY            "Скопировать выделение и поместить его в буфер обмена\nКопировать"
+ID_EDIT_CUT             "Вырезать выделение и поместить его в буфер обмена\nВырезать"
+ID_EDIT_FIND            "Найти указанный текст\nНайти"
+ID_EDIT_PASTE           "Вставка содержимого буфера обмена\nПаста"
+ID_EDIT_SELECT_ALL      "Выделить весь документ\nВыбрать все"
+ID_EDIT_UNDO            "Отменить последнее действие\nОтменить"
+END
+
+STRINGTABLE
+BEGIN
+ID_EDIT_SELECTALL       "Выделить весь документ\nВыбрать все"
+END
+#pragma code_page(1252)
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\locknote.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
