@@ -883,8 +883,8 @@ public:
 		searchtext = m_strSearchString;
 		if (!(m_dwSearchFlags & FR_MATCHCASE))
 		{
-			_strupr_s((char*)text.c_str(), text.size());
-			_strupr_s((char*)searchtext.c_str(), searchtext.size());
+			text = str_tolower(text);
+			searchtext = str_tolower(searchtext);
 		}
 		m_view.GetSel(nBegin, nEnd);
 		
