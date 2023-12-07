@@ -217,10 +217,9 @@ BEGIN
         MENUITEM "Privacy Suite",               ID_STEGANOS_PRIVACYSUITE
         MENUITEM "VPN Online Shield",           ID_STEGANOS_ONLINESHIELD
         MENUITEM SEPARATOR
-        MENUITEM "Sonderangebot LockNote-Nutzer",            ID_STEGANOS_LATESTOFFERS
-        MENUITEM SEPARATOR
         MENUITEM "Auf LockNote Updates prüfen", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
     END
+    MENUITEM "Sonderangebot", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -246,7 +245,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® ist ein eingetragenes Warenzeichen in der Europäischen Union, den Vereinigten Staaten von Amerika, der Schweiz und anderen Ländern.\r\n\r\nDieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\r\n\r\nDie Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\r\n\r\nSie sollten ein Exemplar der GNU General Public License zusammen mit diesem Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA."
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® ist ein eingetragenes Warenzeichen in der Europäischen Union, den Vereinigten Staaten von Amerika, der Schweiz und anderen Ländern.\r\n\r\nDieses Programm ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\r\n\r\nDie Veröffentlichung dieses Programms erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\r\n\r\nSie sollten ein Exemplar der GNU General Public License zusammen mit diesem Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA."
     IDS_ABOUT_TITLE         "Über Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "Website &besuchen..."
 END
@@ -297,7 +296,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Daten-Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Sonderangebot LockNote-Nutzer"
+    IDS_MENUITEM_LATEST     "Sonderangebot"
     IDS_MENUITEM_CHECKUPDATE "Auf LockNote Updates prüfen"
 END
 
@@ -465,10 +464,9 @@ BEGIN
         MENUITEM "Privacy Suite",               ID_STEGANOS_PRIVACYSUITE
         MENUITEM "VPN Online Shield",           ID_STEGANOS_ONLINESHIELD
         MENUITEM SEPARATOR
-        MENUITEM "Special offer for LockNote users",               ID_STEGANOS_LATESTOFFERS
-        MENUITEM SEPARATOR
         MENUITEM "Check for LockNote Updates",  ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
     END
+    MENUITEM "Special offer", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -504,8 +502,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,0,1,0
- PRODUCTVERSION 2,0,1,0
+ FILEVERSION 2,0,2,0
+ PRODUCTVERSION 2,0,2,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -522,12 +520,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Steganos Software GmbH"
             VALUE "FileDescription", "Steganos LockNote 2"
-            VALUE "FileVersion", "2, 0, 1, 0"
+            VALUE "FileVersion", "2, 0, 2, 0"
             VALUE "InternalName", "LockNote 2"
             VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
             VALUE "OriginalFilename", "locknote2.exe"
             VALUE "ProductName", "Steganos LockNote 2"
-            VALUE "ProductVersion", "2, 0, 1, 0"
+            VALUE "ProductVersion", "2, 0, 2, 0"
         END
     END
     BLOCK "VarFileInfo"
@@ -570,7 +568,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
     IDS_ABOUT_TITLE         "About Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "&Visit website..."
 END
@@ -619,7 +617,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Data Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Special offer for LockNote users"
+    IDS_MENUITEM_LATEST     "Special offer"
     IDS_MENUITEM_CHECKUPDATE "Check for LockNote Updates"
 END
 
@@ -785,10 +783,9 @@ BEGIN
         MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
         MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
         MENUITEM SEPARATOR
-        MENUITEM "Offre spéciale aux utilisateurs de LockNote", ID_STEGANOS_LATESTOFFERS
-        MENUITEM SEPARATOR
         MENUITEM "Rechercher les mises à jour", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
         END
+        MENUITEM "Offre spéciale", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -840,7 +837,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® est une marque déposée dans l'Union Européenne, les Etats-Unis d'Amérique, la Suisse et autres pays.\r\n\r\nCe programme est un logiciel libre; vous pouvez le re-distribuer et/ou le modifier selon les termes de la 'General Public License' de GNU publiée par la 'Free Software Foundation'; version 2 de la licence, ou (à votre convenance) toute autre version ultérieure.\r\n\r\nCe programme est distribué avec l'espoir qu'il vous sera utile, mais SANS AUCUNE GARANTIE; également sans même la garantie implicite d'être COMMERCIALISABLE ou de correspondre à un USAGE SPECIFIQUE. Voyez la 'General Public License' de GNU pour plus de détails.\r\n\r\nVous devriez avoir reçu une copie de la 'General Public License' de GNU fournie avec ce programme; dans le cas contraire, vous pouvez écrire à : Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® est une marque déposée dans l'Union Européenne, les Etats-Unis d'Amérique, la Suisse et autres pays.\r\n\r\nCe programme est un logiciel libre; vous pouvez le re-distribuer et/ou le modifier selon les termes de la 'General Public License' de GNU publiée par la 'Free Software Foundation'; version 2 de la licence, ou (à votre convenance) toute autre version ultérieure.\r\n\r\nCe programme est distribué avec l'espoir qu'il vous sera utile, mais SANS AUCUNE GARANTIE; également sans même la garantie implicite d'être COMMERCIALISABLE ou de correspondre à un USAGE SPECIFIQUE. Voyez la 'General Public License' de GNU pour plus de détails.\r\n\r\nVous devriez avoir reçu une copie de la 'General Public License' de GNU fournie avec ce programme; dans le cas contraire, vous pouvez écrire à : Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
     IDS_ABOUT_TITLE         "Sur Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "&Visiter le site Internet..."
     IDS_CHANGE_PASSWORD     "Changer le mot de passe..."
@@ -891,7 +888,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Data Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Offre spéciale aux utilisateurs de LockNote"
+    IDS_MENUITEM_LATEST     "Offre spéciale"
     IDS_MENUITEM_CHECKUPDATE "Rechercher les mises à jour"
 END
 
@@ -1102,7 +1099,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® is een geregistreerd merk in de Europese Unie, de Verenigde Staten van Amerika, Zwitserland en andere landen.\r\n\r\nDit programma is gratis software; u kunt het opnieuw uitgeven en/of het programma aanpassen onder de termen van de GNU General Public License gepubliceerd onder de Free Software Foundation; onder de tweede versie, of (uw keuze) latere versies.\r\n\r\nDit programma is uitgegeven in de hoop dat het handig zal zijn, maar ZONDER ENIGE GARANTIE; zonder zelfs de inbegrepen garantie van MERCHANTABILITY of GESCHIKTHEID VOOR PARTICULIER GEBRUIK. Zie de GNU General Public License voor meer details.\r\n\r\nU zou een kopie van de GNU General Public License moeten hebben gekregen met dit programma; zo niet, schijf naar de Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH.\r\n\r\nSteganos® is een geregistreerd merk in de Europese Unie, de Verenigde Staten van Amerika, Zwitserland en andere landen.\r\n\r\nDit programma is gratis software; u kunt het opnieuw uitgeven en/of het programma aanpassen onder de termen van de GNU General Public License gepubliceerd onder de Free Software Foundation; onder de tweede versie, of (uw keuze) latere versies.\r\n\r\nDit programma is uitgegeven in de hoop dat het handig zal zijn, maar ZONDER ENIGE GARANTIE; zonder zelfs de inbegrepen garantie van MERCHANTABILITY of GESCHIKTHEID VOOR PARTICULIER GEBRUIK. Zie de GNU General Public License voor meer details.\r\n\r\nU zou een kopie van de GNU General Public License moeten hebben gekregen met dit programma; zo niet, schijf naar de Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
     IDS_ABOUT_TITLE         "Over Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "&Bezoek Website..."
 END
@@ -1151,7 +1148,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Data Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Speciaal aanbod voor LockNote gebruikers"
+    IDS_MENUITEM_LATEST     "Speciaal aanbod"
     IDS_MENUITEM_CHECKUPDATE "Controleren op updates"
 END
 
@@ -1360,7 +1357,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® es una marca comercial registrada en la Unión Europea, en los Estados Unidos de América, en Suiza y en otros países.\r\n\r\nEste programa es un software gratuito; usted puede redistribuirlo y modificarlo bajo los términos de la Licencia Pública General GNU publicada por Free Software Foundation; ya sea la versión 2 de la licencia o cualquier versión posterior (a su discreción).\r\n\r\nEste programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; no incluye ni siguiera la garantía implícita de COMERCIABILIDAD o ADECUACIÓN PARA UN FIN PARTICULAR. Consulte la Licencia Pública General GNU para obtener más detalles.\r\n\r\nDebería haber recibido una copia de la Licencia Pública General GNU junto con este programa; si no la recibió, escriba a Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® es una marca comercial registrada en la Unión Europea, en los Estados Unidos de América, en Suiza y en otros países.\r\n\r\nEste programa es un software gratuito; usted puede redistribuirlo y modificarlo bajo los términos de la Licencia Pública General GNU publicada por Free Software Foundation; ya sea la versión 2 de la licencia o cualquier versión posterior (a su discreción).\r\n\r\nEste programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; no incluye ni siguiera la garantía implícita de COMERCIABILIDAD o ADECUACIÓN PARA UN FIN PARTICULAR. Consulte la Licencia Pública General GNU para obtener más detalles.\r\n\r\nDebería haber recibido una copia de la Licencia Pública General GNU junto con este programa; si no la recibió, escriba a Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
     IDS_ABOUT_TITLE         "Sobre Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "&Visite el sitio Web..."
 END
@@ -1411,7 +1408,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Data Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Oferta especial para usuarios de LockNote"
+    IDS_MENUITEM_LATEST     "Oferta especial"
     IDS_MENUITEM_CHECKUPDATE "Buscar actualizaciones"
 END
 
@@ -1577,10 +1574,9 @@ MENUITEM "Data Safe", ID_STEGANOS_SAFE
 MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
 MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
 MENUITEM SEPARATOR
-MENUITEM "Offerta speciale per gli utenti di LockNote", ID_STEGANOS_LATESTOFFERS
-MENUITEM SEPARATOR
 MENUITEM "Verifica degli aggiornamenti di LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
 END
+MENUITEM "Offerta speciale", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -1616,8 +1612,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2, 0, 1, 0
-PRODUCTVERSION 2, 0, 1, 0
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
 FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
 FILEFLAGS 0x1L
@@ -1639,7 +1635,7 @@ VALUE "InternalName", "LockNote 2"
 VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
 VALUE "OriginalFilename", "locknote2.exe"
 VALUE "ProductName", "Steganos LockNote 2"
-VALUE "ProductVersion", "2, 0, 1, 0"
+VALUE "ProductVersion", "2, 0, 2, 0"
 END
 END
 BLOCK "VarFileInfo"
@@ -1682,7 +1678,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+    IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
     IDS_ABOUT_TITLE         "About Steganos LockNote 2"
     IDS_VISIT_WEBSITE       "&Visita il sito web..."
 END
@@ -1731,7 +1727,7 @@ BEGIN
     IDS_MENUITEM_SAFE       "Data Safe"
     IDS_MENUITEM_SSS        "Privacy Suite"
     IDS_MENUITEM_SOS        "VPN Online Shield"
-    IDS_MENUITEM_LATEST     "Offerta speciale per gli utenti di LockNote"
+    IDS_MENUITEM_LATEST     "Offerta speciale"
     IDS_MENUITEM_CHECKUPDATE "Verifica degli aggiornamenti di LockNote"
 END
 
@@ -1895,10 +1891,9 @@ MENUITEM "Data Safe", ID_STEGANOS_SAFE
 MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
 MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
 MENUITEM SEPARATOR
-MENUITEM "Oferta especial para utilizadores do LockNote", ID_STEGANOS_LATESTOFFERS
-MENUITEM SEPARATOR
 MENUITEM "Verificar se há actualizações do LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
 END
+MENUITEM "Oferta especial", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -1934,8 +1929,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2, 0, 1, 0
-PRODUCTVERSION 2, 0, 1, 0
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
 FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
 FILEFLAGS 0x1L
@@ -1952,12 +1947,12 @@ BLOCK "000004b0"
 BEGIN
 VALUE "CompanyName", "Steganos Software GmbH"
 VALUE "FileDescription", "Steganos LockNote 2"
-VALUE "FileVersion", "2, 0, 1, 0"
+VALUE "FileVersion", "2, 0, 2, 0"
 VALUE "InternalName", "LockNote 2"
 VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
 VALUE "OriginalFilename", "locknote2.exe"
 VALUE "ProductName", "Steganos LockNote 2"
-VALUE "ProductVersion", "2, 0, 1, 0"
+VALUE "ProductVersion", "2, 0, 2, 0"
 END
 END
 BLOCK "VarFileInfo"
@@ -2000,7 +1995,7 @@ END
 
 STRINGTABLE
 BEGIN
-IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
 IDS_ABOUT_TITLE         "About Steganos LockNote 2"
 IDS_VISIT_WEBSITE       "&Visitar o sítio Web..."
 END
@@ -2051,7 +2046,7 @@ IDS_MENUITEM_SPM        "Password Manager"
 IDS_MENUITEM_SAFE       "Data Safe"
 IDS_MENUITEM_SSS        "Privacy Suite"
 IDS_MENUITEM_SOS        "VPN Online Shield"
-IDS_MENUITEM_LATEST     "Oferta especial para utilizadores do LockNote"
+IDS_MENUITEM_LATEST     "Oferta especial"
 IDS_MENUITEM_CHECKUPDATE "Verificar se há actualizações do LockNote"
 END
 
@@ -2217,10 +2212,9 @@ MENUITEM "Data Safe", ID_STEGANOS_SAFE
 MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
 MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
 MENUITEM SEPARATOR
-MENUITEM "Specjalna oferta dla użytkowników LockNote", ID_STEGANOS_LATESTOFFERS
-MENUITEM SEPARATOR
 MENUITEM "Sprawdź aktualizacje LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
 END
+MENUITEM "Specjalna oferta", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -2256,8 +2250,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2, 0, 1, 0
-PRODUCTVERSION 2, 0, 1, 0
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
 FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
 FILEFLAGS 0x1L
@@ -2274,12 +2268,12 @@ BLOCK "000004b0"
 BEGIN
 VALUE "CompanyName", "Steganos Software GmbH"
 VALUE "FileDescription", "Steganos LockNote 2"
-VALUE "FileVersion", "2, 0, 1, 0"
+VALUE "FileVersion", "2, 0, 2, 0"
 VALUE "InternalName", "LockNote 2"
 VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
 VALUE "OriginalFilename", "locknote2.exe"
 VALUE "ProductName", "Steganos LockNote 2"
-VALUE "ProductVersion", "2, 0, 1, 0"
+VALUE "ProductVersion", "2, 0, 2, 0"
 END
 END
 BLOCK "VarFileInfo"
@@ -2322,7 +2316,7 @@ END
 
 STRINGTABLE
 BEGIN
-IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
 IDS_ABOUT_TITLE         "About Steganos LockNote 2"
 IDS_VISIT_WEBSITE       "Odwiedź stronę..."
 END
@@ -2373,7 +2367,7 @@ IDS_MENUITEM_SPM        "Password Manager"
 IDS_MENUITEM_SAFE       "Data Safe"
 IDS_MENUITEM_SSS        "Privacy Suite"
 IDS_MENUITEM_SOS        "VPN Online Shield"
-IDS_MENUITEM_LATEST     "Specjalna oferta dla użytkowników LockNote"
+IDS_MENUITEM_LATEST     "Specjalna oferta"
 IDS_MENUITEM_CHECKUPDATE "Sprawdź aktualizacje LockNote"
 END
 
@@ -2539,10 +2533,9 @@ BEGIN
         MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
         MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
         MENUITEM SEPARATOR
-        MENUITEM "Specialerbjudande för LockNote-användare", ID_STEGANOS_LATESTOFFERS
-        MENUITEM SEPARATOR
         MENUITEM "Sök efter LockNote-uppdateringar", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
     END
+    MENUITEM "Specialerbjudande", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -2578,8 +2571,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2, 0, 1, 0
-PRODUCTVERSION 2, 0, 1, 0
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
 FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
     FILEFLAGS 0x1L
@@ -2596,12 +2589,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Steganos Software GmbH"
             VALUE "FileDescription", "Steganos LockNote 2"
-            VALUE "FileVersion", "2, 0, 1, 0"
+            VALUE "FileVersion", "2, 0, 2, 0"
             VALUE "InternalName", "LockNote 2"
             VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
             VALUE "OriginalFilename", "locknote2.exe"
             VALUE "ProductName", "Steganos LockNote 2"
-            VALUE "ProductVersion", "2, 0, 1, 0"
+            VALUE "ProductVersion", "2, 0, 2, 0"
         END
     END
     BLOCK "VarFileInfo"
@@ -2644,7 +2637,7 @@ END
 
 STRINGTABLE
 BEGIN
-IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
 IDS_ABOUT_TITLE         "About Steganos LockNote 2"
 IDS_VISIT_WEBSITE       "Besök webbplatsen..."
 END
@@ -2693,7 +2686,7 @@ IDS_MENUITEM_SPM        "Password Manager"
 IDS_MENUITEM_SAFE       "Data Safe"
 IDS_MENUITEM_SSS        "Privacy Suite"
 IDS_MENUITEM_SOS        "VPN Online Shield"
-IDS_MENUITEM_LATEST     "Specialerbjudande för LockNote-användare"
+IDS_MENUITEM_LATEST     "Specialerbjudande"
 IDS_MENUITEM_CHECKUPDATE "Sök efter LockNote-uppdateringar"
 END
 
@@ -2859,10 +2852,9 @@ MENUITEM "Data Safe", ID_STEGANOS_SAFE
 MENUITEM "Privacy Suite", ID_STEGANOS_PRIVACYSUITE
 MENUITEM "VPN Online Shield", ID_STEGANOS_ONLINESHIELD
 MENUITEM SEPARATOR
-MENUITEM "Специальное предложение для пользователей LockNote", ID_STEGANOS_LATESTOFFERS
-MENUITEM SEPARATOR
 MENUITEM "Проверка обновлений LockNote", ID_STEGANOS_CHECKFORLOCKNOTEUPDATES
 END
+MENUITEM "Специальное предложение", ID_STEGANOS_LATESTOFFERS
 END
 
 
@@ -2898,8 +2890,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2, 0, 1, 0
-PRODUCTVERSION 2, 0, 1, 0
+FILEVERSION 2, 0, 2, 0
+PRODUCTVERSION 2, 0, 2, 0
 FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
 FILEFLAGS 0x1L
@@ -2916,12 +2908,12 @@ BLOCK "000004b0"
 BEGIN
 VALUE "CompanyName", "Steganos Software GmbH"
 VALUE "FileDescription", "Steganos LockNote 2"
-VALUE "FileVersion", "2, 0, 1, 0"
+VALUE "FileVersion", "2, 0, 2, 0"
 VALUE "InternalName", "LockNote 2"
 VALUE "LegalCopyright", "Copyright 2006-2023 Steganos Software GmbH"
 VALUE "OriginalFilename", "locknote2.exe"
 VALUE "ProductName", "Steganos LockNote 2"
-VALUE "ProductVersion", "2, 0, 1, 0"
+VALUE "ProductVersion", "2, 0, 2, 0"
 END
 END
 BLOCK "VarFileInfo"
@@ -2964,7 +2956,7 @@ END
 
 STRINGTABLE
 BEGIN
-IDS_COPYRIGHT           "Version 2.0.1\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
+IDS_COPYRIGHT           "Version 2.0.2\r\nCopyright © 2006-2023 Steganos Software GmbH\r\n\r\nSteganos® is a registered trademark in the European Union, the United States of America, Switzerland and other countries.\r\n\r\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\r\n\r\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\r\n\r\nYou should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
 IDS_ABOUT_TITLE         "About Steganos LockNote 2"
 IDS_VISIT_WEBSITE       "Посетите сайт..."
 END
@@ -3015,7 +3007,7 @@ IDS_MENUITEM_SPM        "Password Manager"
 IDS_MENUITEM_SAFE       "Data Safe"
 IDS_MENUITEM_SSS        "Privacy Suite"
 IDS_MENUITEM_SOS        "VPN Online Shield"
-IDS_MENUITEM_LATEST     "Специальное предложение для пользователей LockNote"
+IDS_MENUITEM_LATEST     "Специальное предложение"
 IDS_MENUITEM_CHECKUPDATE "Проверка обновлений LockNote"
 END
 

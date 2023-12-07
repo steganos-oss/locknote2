@@ -876,9 +876,11 @@ public:
 
 	void FindNext()
 	{		
-		int nBegin, nEnd;		
+		int nBegin, nEnd;
 		std::string text;
 		std::string searchtext;
+		std::wstring wtext;
+		std::wstring wsearchtext;
 		text = GetText();
 		searchtext = m_strSearchString;
 		if (!(m_dwSearchFlags & FR_MATCHCASE))
@@ -886,28 +888,30 @@ public:
 			text = str_tolower(text);
 			searchtext = str_tolower(searchtext);
 		}
+		wtext = utf8_to_wstring(text);
+		wsearchtext = utf8_to_wstring(searchtext);
 		m_view.GetSel(nBegin, nEnd);
 		
 		int nIndex;
 		if (!(m_dwSearchFlags & FR_DOWN))
 		{
-			nIndex = text.rfind(searchtext, nBegin-1);
+			nIndex = wtext.rfind(wsearchtext, nBegin-1);
 			if (nIndex == -1)
 			{
-				nIndex = text.rfind(searchtext, -1);
+				nIndex = wtext.rfind(wsearchtext, -1);
 			}
 		}
 		else
 		{
-			nIndex = text.find(searchtext, nEnd);
+			nIndex = wtext.find(wsearchtext, nEnd);
 			if (nIndex == -1)
 			{
-				nIndex = text.find(searchtext, 0);
+				nIndex = wtext.find(wsearchtext, 0);
 			}
 		}
 		if (nIndex != -1)
 		{
-			m_view.SetSel(nIndex,nIndex+strlen(searchtext.c_str()));
+			m_view.SetSel(nIndex, nIndex + wcslen(wsearchtext.c_str()));
 		}
 		else
 		{

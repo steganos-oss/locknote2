@@ -35,6 +35,9 @@ The LockNote 2 source has following dependencies:
 History
 -------
 
+* 2.0.2, 2023/12/07:
+	- FIX: fixed problem in search results where selection was off due to utf-8 vs. wide string indexing mismatch
+	
 * 2.0.1, 2023/09/07:
 	- FIX: fixed crash in search function
 	- FIX: fixed Polish encoding
